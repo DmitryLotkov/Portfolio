@@ -3,9 +3,9 @@ import {faReact} from "@fortawesome/free-brands-svg-icons";
 import {faHtml5} from "@fortawesome/free-brands-svg-icons";
 import {faCss3} from "@fortawesome/free-brands-svg-icons";
 import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
-import {faBookOpen} from "@fortawesome/free-solid-svg-icons/faBookOpen";
-import tsLogo from "./../../../Images/TSLogo.jpg"
-import ReduxLogo from "./../../../Images/Redux.jpg"
+import tsLogo from "./../../../Images/typescript.svg"
+import ReduxLogo from "./../../../Images/Redux.svg"
+import StorybookLogo from "./../../../Images/Storybook.svg"
 
 type DataType = {
     picture: any,
@@ -56,7 +56,7 @@ export const skillsData:skillsDataType = {
             skillDescription: "Something about TDD.",
         },
         {
-            picture: faBookOpen,
+            picture: StorybookLogo,
             skill: "StoryBook",
             skillDescription: "Something about Storybook.",
         },
