@@ -1,0 +1,23 @@
+.main {
+    height: 100vh;
+    padding-top: 10rem;
+    transition: box-shadow .3s ease-in-out;
+    display: flex;
+   /* border: 1px solid red;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 63.5%;
+    margin-bottom: 50px;
+    min-width: 25%;
+}
+
+@media screen and (max-width: 1620px){
+    .main {
+        margin-bottom: 108rem;
+    }
+}
+*, :after, :before {
+    box-sizing: border-box;
+}

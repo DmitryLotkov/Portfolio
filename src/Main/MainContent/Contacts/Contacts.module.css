@@ -1,0 +1,81 @@
+input[type="text"] {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .input {
+        width: 100%;
+    }
+}
+
+.input {
+    color: #44566c;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: none;
+    height: auto;
+    padding: 0.875rem 1.375rem 0.8125rem;
+    outline: none;
+    margin-right: 15px;
+    margin-left: 15px;
+    flex-grow: 1;
+    margin-bottom: 30px;
+
+}
+
+.input:focus {
+    border: 1px solid #304cfd;
+    background-color: #fffcfc;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border: 1px solid;*/
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.textArea{
+    border-radius: 20px;
+    display: block;
+    padding: 0.8125rem 1.1875rem;
+    resize: none;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    outline: none;
+    height: 200px;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.textArea:focus{
+    border: 1px solid #304cfd;
+    background-color: #fffcfc;
+}
+.allForms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.LastContactContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color:#304cfd;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+}
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+}
