@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ce5785e0.css",
-    "main.js": "/Portfolio/static/js/main.346581dc.js",
+    "main.css": "/Portfolio/static/css/main.df041692.css",
+    "main.js": "/Portfolio/static/js/main.8c6b5a31.js",
     "static/js/787.9b9c0edf.chunk.js": "/Portfolio/static/js/787.9b9c0edf.chunk.js",
     "static/media/MyPhoto.jpg": "/Portfolio/static/media/MyPhoto.7aaf0eb7b6d06f11f970.jpg",
     "static/media/To-DO List React background.png": "/Portfolio/static/media/To-DO List React background.d877940a086493b2f077.png",
-    "static/media/Redux.jpg": "/Portfolio/static/media/Redux.f486b6eb4e0664f85c24.jpg",
-    "static/media/TSLogo.jpg": "/Portfolio/static/media/TSLogo.9698d8ee893470cbb1f5.jpg",
     "static/media/SN.svg": "/Portfolio/static/media/SN.da2537d2ff4f207487e1b0cd000d91c4.svg",
+    "static/media/Storybook.svg": "/Portfolio/static/media/Storybook.518ad7b73e82765090b41db1c57cf25e.svg",
     "static/media/triangles-bottom.svg": "/Portfolio/static/media/triangles-bottom.b7e66d607d80493db2d8.svg",
+    "static/media/Redux.svg": "/Portfolio/static/media/Redux.f636bd77ff279e2f8b28f04f58dd4c2a.svg",
     "static/media/triangles-top.svg": "/Portfolio/static/media/triangles-top.aa97cd973b6a6b6ccd3d.svg",
+    "static/media/typescript.svg": "/Portfolio/static/media/typescript.40c24e28253ce90ce7f89763863b55b6.svg",
     "index.html": "/Portfolio/index.html",
-    "main.ce5785e0.css.map": "/Portfolio/static/css/main.ce5785e0.css.map",
-    "main.346581dc.js.map": "/Portfolio/static/js/main.346581dc.js.map",
+    "main.df041692.css.map": "/Portfolio/static/css/main.df041692.css.map",
+    "main.8c6b5a31.js.map": "/Portfolio/static/js/main.8c6b5a31.js.map",
     "787.9b9c0edf.chunk.js.map": "/Portfolio/static/js/787.9b9c0edf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce5785e0.css",
-    "static/js/main.346581dc.js"
+    "static/css/main.df041692.css",
+    "static/js/main.8c6b5a31.js"
   ]
 }
