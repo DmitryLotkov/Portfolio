@@ -21,11 +21,11 @@
         box-shadow: 0  0 rgba(0,0,0,.05);
     }
     .aside{
-        flex: 0 0 72.4% !important;
+        flex: 1 0 72.4% !important;
 
     }
     .avatar{
-        margin-top: -94px;
+        margin-top: 40px !important;
     }
 }
 
@@ -34,6 +34,8 @@
     height: 188px;
     border-radius: 40px;
     margin-top: -94px;
+    transition: margin-top 0.7s ease-in-out;
+
 }
 .nameAvatar{
     background-color:  #ffffff;
@@ -42,8 +44,6 @@
 .aside{
     /*border: 1px solid black;*/
     width: 100%;
-    padding-right: 2px;
-    padding-left: 2px;
     display: flex;
     flex: 0 0 28%;
     z-index: 2;
@@ -51,18 +51,10 @@
     min-width: 280px;
     flex-wrap: wrap;
 }
-.aside._active {
-    border: 1px solid;
-    transform: translate(0, 120%);
-    opacity: 0;
-    transition: all 0.5s ease-out;
-    width: 100%;
-    padding-right: 2px;
-    padding-left: 2px;
-    display: flex;
-    flex: 0 0 28%;
-    z-index: 3;
-    justify-content: center;
-    min-width: 280px;
-    flex-wrap: wrap;
+.avatarActive {
+    width: 200px;
+    height: 188px;
+    border-radius: 40px;
+    margin-top: 40px;
+    transition: margin-top 0.7s ease-in-out;
 }

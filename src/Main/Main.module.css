@@ -1,11 +1,10 @@
-.main {
-    height: 100vh;
+.main{
     padding-top: 10rem;
     transition: box-shadow .3s ease-in-out;
     display: flex;
-   /* border: 1px solid red;*/
+    /*border: 1px solid red;*/
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin-right: auto;
     margin-left: auto;
     max-width: 63.5%;
@@ -15,7 +14,9 @@
 
 @media screen and (max-width: 1620px){
     .main {
-        margin-bottom: 108rem;
+        flex-grow: 1;
+        max-width: 100%;
+        padding-top: 0;
     }
 }
 *, :after, :before {
