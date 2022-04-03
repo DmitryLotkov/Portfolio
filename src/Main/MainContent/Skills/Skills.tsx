@@ -1,15 +1,16 @@
 import React from 'react';
-import style from "./Skills.module.css"
-import commonStyle from "./../../../Common/Styles/h.module.css";
+import style from "./Skills.module.scss"
+import commonStyle from "../../../Common/Styles/h.module.scss";
 import {SkillsItem} from "./SkillsItem";
 import {skillsData} from "./SkillData"
+import {titles} from "../../../Common/components/TitleData";
 
 
 export function Skills() {
     return (
         <div className={style.skillsBlock}>
             <span>
-                <h2 className={commonStyle.h2}>Skills</h2>
+                <h2 className={commonStyle.h2}>{titles.title2}</h2>
             </span>
 
             <div className={style.skillsContainer}>

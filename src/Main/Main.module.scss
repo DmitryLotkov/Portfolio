@@ -1,4 +1,4 @@
-.main{
+.main {
     padding-top: 10rem;
     transition: box-shadow .3s ease-in-out;
     display: flex;
@@ -8,8 +8,7 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 63.5%;
-    margin-bottom: 50px;
-    min-width: 25%;
+    /*min-width: 25%;*/
 }
 
 @media screen and (max-width: 1620px){
@@ -17,6 +16,7 @@
         flex-grow: 1;
         max-width: 100%;
         padding-top: 0;
+
     }
 }
 *, :after, :before {

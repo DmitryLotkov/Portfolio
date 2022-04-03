@@ -1,0 +1,56 @@
+@import "src/Common/Styles/variables";
+.skillsBlock {
+  display: flex;
+  flex-wrap: wrap;
+
+  .skillsContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    justify-content: space-between;
+
+    .skillsItem {
+      min-width: calc(50% - 30px);
+      width: calc(50% - 30px);
+      background-color: $secondInnerBlockBackgroundColor;
+      margin-bottom: 30px;
+      padding: 30px 30px 24px 20px;
+      margin-right: 15px;
+      margin-left: 15px;
+      border-radius: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+      }
+
+      .image {
+        height: 42px;
+        width: 42px;
+        margin-right: 1rem;
+        border-radius: 4px;
+      }
+
+      .skillText {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        box-sizing: border-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        font-size: 0.8rem;
+        flex-direction: column;
+
+        .skillTitle {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+

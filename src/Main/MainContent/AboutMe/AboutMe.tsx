@@ -1,15 +1,15 @@
 import React from 'react';
-import style from "./AboutMe.module.css"
-import commonStyle from "./../../../Common/Styles/Box.module.css";
+import style from "./AboutMe.module.scss"
+import commonStyle from "../../../Common/Styles/Box.module.scss";
 
-
+import {titles} from "../../../Common/components/TitleData"
 export function AboutMe() {
     return (
         <div className={`${style.aboutMe} + ${commonStyle.inner} `}>
             <span>
-                <h2 className={commonStyle.h2}>About Me</h2>
+                <h2 className={commonStyle.h2}>{titles.title1}</h2>
             </span>
-            <div className={style.singlePostText}>
+            <div>
                 <p>
                     I'm frontend developer from Minsk, Belarus, working in web development.
                     I enjoy turning complex problems into simple, beautiful and intuitive designs.

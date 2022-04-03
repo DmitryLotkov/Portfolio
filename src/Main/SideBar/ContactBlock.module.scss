@@ -1,0 +1,72 @@
+@import "./src/Common/Styles/variables";
+.contactsBlock {
+  background-color: $firstInnerBlockBackgroundColor;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  @media screen and (max-width: 500px) {
+    background-color: $firstInnerBlockBackgroundColor;
+    padding-top: 1rem;
+    margin-left: 1.875rem;
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    font-size: 17px;
+  }
+  @media screen and (max-width: 1620px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 1rem;
+
+  }
+
+  .contactsBlockItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6875rem;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+
+    .icon {
+      margin-right: 0.875rem;
+    }
+
+    a {
+      color: #44566c;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .lastContactBlockItem {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    @media screen and (max-width: 1620px) {
+      margin-bottom: 0.6875rem;
+    }
+
+    .icon {
+      margin-right: 0.875rem;
+    }
+
+    a {
+      color: #44566c;
+      cursor: pointer;
+      text-decoration: none !important;
+    }
+  }
+}
+
+
+
+
+
+
+
+

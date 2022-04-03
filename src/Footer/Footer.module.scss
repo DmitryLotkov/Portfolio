@@ -1,0 +1,17 @@
+@import "src/Common/Styles/variables";
+.LastContactContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: $secondInnerBlockBackgroundColor;
+  border-radius: 0 0 20px 20px;
+  :hover {
+    color: $buttonAndFocusTextColor;
+  }
+
+  @media screen and (max-width: 1620px) {
+    border-radius: 0 !important;
+  }
+}
+

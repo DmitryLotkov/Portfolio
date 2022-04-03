@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "./ContactBlock.module.css"
+import style from "./ContactBlock.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMapMarkerAlt} from "@fortawesome/free-solid-svg-icons/faMapMarkerAlt";
 import {faCalendarMinus, faEnvelope} from "@fortawesome/free-solid-svg-icons";
@@ -38,8 +38,9 @@ export function ContactBlock() {
                 <Tooltip title={"Phone"} placement="top" arrow={true}>
                     <div className={style.contactsBlockItem}>
                         <FontAwesomeIcon className={style.icon} icon={faPhone}/>
-                        <a className={style.icon} href="tel:+375298779472" target="_blank">
+                        <a href="tel:+375298779472">
                             +375 (29) 877-94-72
+
                         </a>
                     </div>
                 </Tooltip>
@@ -54,7 +55,7 @@ export function ContactBlock() {
                 </Tooltip>
 
                 <Tooltip title={"CodeWars"} placement="top" arrow={true}>
-                    <div className={style.contactsBlockItem}>
+                    <div className={style.lastContactBlockItem}>
                         <FontAwesomeIcon className={style.icon} icon={faCode}/>
                         <a  href="https://www.codewars.com/dashboard">
                             My CodeWars

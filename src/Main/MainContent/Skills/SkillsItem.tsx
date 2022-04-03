@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "./Skills.module.css"
+import style from "./Skills.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
@@ -12,7 +12,7 @@ type SkillSPropsType = {
 export function SkillsItem(props: SkillSPropsType) {
     return (
         <div className={style.skillsItem}>
-            {  typeof props.pictures === "string" ? <img className={style.image} src={props.pictures} alt="skill image"/>
+            {  typeof props.pictures === "string" ? <img className={style.image} src={props.pictures} alt="skill"/>
             :
                 <FontAwesomeIcon className={style.image} icon={props.pictures}/>}
             <div className={style.skillText}>

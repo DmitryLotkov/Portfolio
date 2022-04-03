@@ -1,0 +1,28 @@
+@import "./../Styles/variables";
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    .sentButton {
+        background-color: $buttonAndFocusTextColor;
+        border-radius: 20px;
+        border: 0;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05) !important;
+        color: $secondInnerBlockBackgroundColor;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: inherit;
+        padding: 0.5rem 2rem 0.5rem;
+        position: relative;
+        transition: .4s ease-in-out;
+        text-transform: none;
+        width: 200px;
+        -webkit-tap-highlight-color: transparent;
+        :active {
+            box-shadow: 11px 10px 55px 9px rgba(34, 60, 80, 0.65) !important;
+
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import "src/Common/Styles/variables";
+.nameAndProf{
+    text-align: center;
+    .userName{
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1.8125rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .textWeight{
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+    }
+    .professionName{
+        background-color: $bodyBackgroundColor;
+        color: $bodyTextColor;
+        display: inline-block;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        border-radius: 10rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+

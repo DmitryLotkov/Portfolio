@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import {Main} from "./Main/Main";
+import {Header} from "./Header/Header";
 
 export function App() {
   return (
     <div className={"App"}>
-          {/*<Header/>*/}
+          <Header/>
           <Main/>
     </div>
   );

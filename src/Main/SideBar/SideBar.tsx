@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import style from "./SideBar.module.css";
+import style from "./SideBar.module.scss";
 import {NameAndProf} from "./NameAndProf";
 import Avatar from "./MyPhoto.jpg"
 import {ContactBlock} from "./ContactBlock";
-import Button from "../../Common/Button";
+import Button from "../../Common/components/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowAltCircleDown} from "@fortawesome/free-regular-svg-icons";
 

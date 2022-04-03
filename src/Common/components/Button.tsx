@@ -1,8 +1,8 @@
 import React, {ButtonHTMLAttributes, DetailedHTMLProps} from 'react'
-import style from "./../Main/MainContent/MainContent.module.css"
+import style from './Button.module.scss'
 
 
-// тип пропсов обычной кнопки, children в котором храниться название кнопки там уже описан
+// тип пропсов обычной кнопки, children в котором хранится название кнопки там уже описан
 type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
 type SuperButtonPropsType = DefaultButtonPropsType & {

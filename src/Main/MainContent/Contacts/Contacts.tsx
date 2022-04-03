@@ -1,11 +1,10 @@
-import commonStyle from "../../../Common/Styles/h.module.css";
+import commonStyle from "../../../Common/Styles/h.module.scss";
 import React from "react";
-import styles from "./../Contacts/Contacts.module.css"
+import styles from "./Contacts.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane";
-
-import {buttonData} from "../../../Common/ButtonData"
-import Button from "../../../Common/Button";
+import Button from "../../../Common/components/Button";
+import {titles} from "../../../Common/components/TitleData";
 
 export function Contacts() {
     return (
@@ -21,7 +20,7 @@ export function Contacts() {
                     <Button>
                         <FontAwesomeIcon
                             icon={faPaperPlane}/>
-                        <span style={{marginLeft: "10px"}}>{buttonData.contactsBlockMessage}</span>
+                        <span style={{marginLeft: "10px"}}>{titles.title4}</span>
                     </Button>
                 </div>
             </div>

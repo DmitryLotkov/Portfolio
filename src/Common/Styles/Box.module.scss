@@ -1,8 +1,9 @@
+@import "src/Common/Styles/variables";
 *, *::before, *::after {
     box-sizing: border-box;
 }
 .box {
-    background-color: #f8f9fa;
+    background-color: $secondInnerBlockBackgroundColor;
     border-radius: 20px;
     padding: 1.875rem;
     transition: box-shadow .3s ease-in-out;
@@ -11,14 +12,10 @@
     min-width: 700px;
 }
 .inner {
-    background-color: #fff;
+    background-color: $secondInnerBlockBackgroundColor;
     padding: 1.875rem;
     transition: box-shadow .3s ease-in-out;
 }
 .shadow {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.05)!important
-}
-.skillsContainer{
-    align-items: flex-start;
-
 }

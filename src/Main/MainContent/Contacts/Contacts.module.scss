@@ -1,0 +1,67 @@
+@import "src/Common/Styles/variables";
+
+.allForms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .inputWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    .input {
+      color: $bodyTextColor;
+      border: 1px solid #e0e0e0;
+      border-radius: 20px;
+      box-shadow: none;
+      height: auto;
+      padding: 0.875rem 1.375rem 0.8125rem;
+      outline: none;
+      margin-right: 15px;
+      margin-left: 15px;
+      flex-grow: 1;
+      margin-bottom: 30px;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      background-color: $secondInnerBlockBackgroundColor;
+      @media screen and (max-width: 1620px) {
+        width: 100%;
+      }
+
+    }
+
+    :focus {
+      border: 1px solid $buttonAndFocusTextColor;
+    }
+
+  }
+
+  .textArea {
+    border-radius: 20px;
+    display: block;
+    padding: 0.8125rem 1.1875rem;
+    resize: none;
+    margin-right: 30px;
+    margin-left: 30px;
+    outline: none;
+    height: 200px;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: $bodyTextColor;
+    background-color: $secondInnerBlockBackgroundColor;
+  }
+
+  :focus {
+    border: 1px solid $buttonAndFocusTextColor;
+  }
+}
+
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "./Works.module.css"
+import style from "./Works.module.scss"
 
 type WorksItemPropsType = {
     description: string
@@ -13,8 +13,6 @@ export function WorksItem(props: WorksItemPropsType) {
         <a className={style.worksItem} href={props.href}>
             <div>
                 <img className={style.img} src={props.src} alt={"work Img"}/>
-
-
                 <div className={style.titleContent}>
                     <h3>{props.title}</h3>
                     <p>
