@@ -7,7 +7,7 @@ export function AboutMe() {
     return (
         <div className={`${style.aboutMe} + ${commonStyle.inner} `}>
             <span>
-                <h2 className={commonStyle.h2}>{titles.title1}</h2>
+                <h2>{titles.title1}</h2>
             </span>
             <div>
                 <p>
