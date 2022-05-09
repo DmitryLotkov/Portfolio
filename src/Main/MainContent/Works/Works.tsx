@@ -3,13 +3,13 @@ import style from "./Works.module.scss"
 import commonStyle from "../../../Common/Styles/h.module.scss";
 import {WorksItem} from "./WorksItem";
 import {content} from "./WorksData";
-import {titles} from "../../../Common/components/TitleData";
+import {titles} from "../../../Common/components/CommonData";
 
 
 
 export function Works() {
     return (
-        <div className={style.worksContainer}>
+        <section id={"works"} className={style.worksContainer}>
             <h2 className={commonStyle.h2}>{titles.title3}</h2>
 
             <div className={style.worksContent}>
@@ -21,7 +21,7 @@ export function Works() {
                                src={item.src}/>)}
 
             </div>
-        </div>
+        </section>
 
     );
 }

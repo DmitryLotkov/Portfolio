@@ -1,0 +1,43 @@
+@import "../Common/Styles/variables";
+
+.nav {
+  /*border: 1px solid;*/
+  display: flex;
+  height: 50px;
+  font-family: inherit;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    color: $bodyTextColor;
+  }
+  .menuButton {
+    margin-left: 1rem;
+    display: flex;
+    cursor: pointer;
+   /* border: 1px solid black;*/
+    overflow: hidden;
+  }
+
+  .burgerMenu {
+    transition: 0.6s;
+    width: 300px;
+    /*opacity: 100;*/
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transform: translateX(0);
+
+  }
+
+  .burgerMenuActive {
+    @extend .burgerMenu;
+   /* opacity: 0;*/
+    cursor: auto;
+    transform: translateX(400px);
+  }
+}

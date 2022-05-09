@@ -4,13 +4,13 @@ import styles from "./Contacts.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import Button from "../../../Common/components/Button";
-import {titles} from "../../../Common/components/TitleData";
+import {titles} from "../../../Common/components/CommonData";
 
 export function Contacts() {
     return (
-        <form>
+        <form id={"contacts"}>
             <h2 className={commonStyle.h2}>My Contacts</h2>
-            <div className={styles.allForms}>
+            <section className={styles.allForms}>
                 <div className={styles.inputWrapper}>
                     <input className={styles.input} type="text" placeholder="Login"/>
                     <input className={styles.input} type="text" placeholder="Email"/>
@@ -23,7 +23,7 @@ export function Contacts() {
                         <span style={{marginLeft: "10px"}}>{titles.title4}</span>
                     </Button>
                 </div>
-            </div>
+            </section>
         </form>
     );
 }

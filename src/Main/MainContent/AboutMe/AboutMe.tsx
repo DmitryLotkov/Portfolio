@@ -1,11 +1,13 @@
 import React from 'react';
 import style from "./AboutMe.module.scss"
 import commonStyle from "../../../Common/Styles/Box.module.scss";
+import {titles} from "../../../Common/components/CommonData"
+import {Nav} from "../../../NavBar/Nav";
 
-import {titles} from "../../../Common/components/TitleData"
 export function AboutMe() {
     return (
-        <div className={`${style.aboutMe} + ${commonStyle.inner} `}>
+        <section id={"aboutMe"} className={`${style.aboutMe} + ${commonStyle.inner} `}>
+            <Nav/>
             <span>
                 <h2>{titles.title1}</h2>
             </span>
@@ -24,6 +26,6 @@ export function AboutMe() {
                     Consider options for remote work.
                 </p>
             </div>
-        </div>
+        </section>
     );
 }
