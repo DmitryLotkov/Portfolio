@@ -11,7 +11,7 @@ type WorksItemPropsType = {
 export function WorksItem(props: WorksItemPropsType) {
     return (
         <a className={style.worksItem} href={props.href}>
-            <div>
+
                 <img className={style.img} src={props.src} alt={"work Img"}/>
                 <div className={style.titleContent}>
                     <h3>{props.title}</h3>
@@ -19,7 +19,7 @@ export function WorksItem(props: WorksItemPropsType) {
                         {props.description}
                     </p>
                 </div>
-            </div>
+
         </a>
     );
 }

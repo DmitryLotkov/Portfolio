@@ -3,7 +3,6 @@
   width: 100%;
   min-width: 280px;
   background-color: $secondInnerBlockBackgroundColor;
-  padding-bottom: 2rem;
 
   .worksContent {
     display: flex;
@@ -16,7 +15,7 @@
     .worksItem {
       background-color: $firstInnerBlockBackgroundColor;
       width: calc(50% - 30px);
-      flex-grow: 1;
+      /*flex-grow: 1;*/
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -26,9 +25,10 @@
       padding: 30px 30px 24px 30px;
       text-decoration: none;
       color: $bodyTextColor;
+      margin-bottom: 2rem;
       @media screen and (max-width: 1200px) {
         width: 100% !important;
-        margin-bottom: 2rem;
+
       }
 
       .img {

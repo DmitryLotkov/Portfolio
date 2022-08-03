@@ -19,8 +19,8 @@ export function AboutMe() {
                 <p>
                     My job is to build web applications so that it is functional and user-friendly but at the same time
                     attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and
-                    easy to use. I use modern technologies like as: React JS, Redux Thunk/Saga, unit testing, Storybook.
-                    Strong knowledge of native JavaScript and TypeScript.
+                    easy to use. I use modern technologies like as: React JS, Redux Thunk, unit testing, Storybook.
+                    Confident knowledge of native JavaScript and TypeScript.
                 </p>
                 <p>
                     Consider options for remote work.

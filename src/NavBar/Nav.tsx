@@ -2,11 +2,11 @@ import React, {useEffect, useRef, useState} from 'react';
 import style from "./Nav.module.scss";
 import BurgerMenu from "./BurgerMenu";
 import {burgerMenuItems} from "../Common/components/CommonData";
+import Hamburger from 'hamburger-react'
 
 export function Nav() {
 
     const [menuIsActive, setMenuIsActive] = useState<boolean>(false);
-    const menuHandler = () => setMenuIsActive(!menuIsActive);
     const menuRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -27,19 +27,7 @@ export function Nav() {
             <BurgerMenu setMenuActive={setMenuIsActive}
                         menuIsActive={menuIsActive}
                         items={burgerMenuItems}/>
-            <div className={style.menuButton} onClick={menuHandler}>
-
-                {menuIsActive
-                    ?
-                    <span className="material-icons">
-                        close
-                    </span>
-                    :
-                    <span className="material-icons">
-                        menu_open
-                    </span>
-                }
-            </div>
+            <Hamburger rounded size={20} toggled={menuIsActive} toggle={setMenuIsActive} />
         </div>
     );
 }
