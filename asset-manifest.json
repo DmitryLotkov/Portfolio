@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.e434c16a.css",
-    "main.js": "/Portfolio/static/js/main.b2d1e367.js",
+    "main.css": "/Portfolio/static/css/main.105c1a07.css",
+    "main.js": "/Portfolio/static/js/main.f7d92c50.js",
     "static/js/787.9b9c0edf.chunk.js": "/Portfolio/static/js/787.9b9c0edf.chunk.js",
     "static/media/MyPhoto.jpg": "/Portfolio/static/media/MyPhoto.7aaf0eb7b6d06f11f970.jpg",
     "static/media/To-DO List React background.png": "/Portfolio/static/media/To-DO List React background.d877940a086493b2f077.png",
     "static/media/card project image.png": "/Portfolio/static/media/card project image.11e49de3a0d9de3db5b9.png",
     "static/media/SN.svg": "/Portfolio/static/media/SN.da2537d2ff4f207487e1b0cd000d91c4.svg",
+    "static/media/rest.svg": "/Portfolio/static/media/rest.5ee45ed133a77aa2f782f849b8d9c745.svg",
     "static/media/Storybook.svg": "/Portfolio/static/media/Storybook.518ad7b73e82765090b41db1c57cf25e.svg",
     "static/media/Sass_Logo_Color.svg": "/Portfolio/static/media/Sass_Logo_Color.309c150a923fa7bfdd1aed521cd07d88.svg",
     "static/media/triangles-bottom.svg": "/Portfolio/static/media/triangles-bottom.b7e66d607d80493db2d8.svg",
@@ -15,12 +16,12 @@
     "static/media/mui-logo.svg": "/Portfolio/static/media/mui-logo.77a82be3302050252b5c7b8fdf19025b.svg",
     "static/media/typescript.svg": "/Portfolio/static/media/typescript.40c24e28253ce90ce7f89763863b55b6.svg",
     "index.html": "/Portfolio/index.html",
-    "main.e434c16a.css.map": "/Portfolio/static/css/main.e434c16a.css.map",
-    "main.b2d1e367.js.map": "/Portfolio/static/js/main.b2d1e367.js.map",
+    "main.105c1a07.css.map": "/Portfolio/static/css/main.105c1a07.css.map",
+    "main.f7d92c50.js.map": "/Portfolio/static/js/main.f7d92c50.js.map",
     "787.9b9c0edf.chunk.js.map": "/Portfolio/static/js/787.9b9c0edf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e434c16a.css",
-    "static/js/main.b2d1e367.js"
+    "static/css/main.105c1a07.css",
+    "static/js/main.f7d92c50.js"
   ]
 }
