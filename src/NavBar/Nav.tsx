@@ -27,7 +27,9 @@ export function Nav() {
             <BurgerMenu setMenuActive={setMenuIsActive}
                         menuIsActive={menuIsActive}
                         items={burgerMenuItems}/>
-            <Hamburger rounded size={20} toggled={menuIsActive} toggle={setMenuIsActive} />
+            <div className={style.hamburger} >
+                <Hamburger rounded size={20} toggled={menuIsActive} toggle={setMenuIsActive}/>
+            </div>
         </div>
     );
 }

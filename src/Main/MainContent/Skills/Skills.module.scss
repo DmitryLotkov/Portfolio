@@ -2,14 +2,14 @@
 .skillsBlock {
   display: flex;
   flex-wrap: wrap;
+  margin-right: 15px;
+  margin-left: 15px;
 
   .skillsContainer {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
-    margin-right: 15px;
-    margin-left: 15px;
     justify-content: space-between;
 
     .skillsItem {

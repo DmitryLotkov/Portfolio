@@ -3,10 +3,12 @@ import style from "./AboutMe.module.scss"
 import commonStyle from "../../../Common/Styles/Box.module.scss";
 import {titles} from "../../../Common/components/CommonData"
 import {Nav} from "../../../NavBar/Nav";
+import { Fade } from 'react-awesome-reveal';
 
 export function AboutMe() {
     return (
         <section id={"aboutMe"} className={`${style.aboutMe} + ${commonStyle.inner} `}>
+            <Fade>
             <Nav/>
             <span>
                 <h2>{titles.title1}</h2>
@@ -26,6 +28,7 @@ export function AboutMe() {
                     Consider options for remote work.
                 </p>
             </div>
+            </Fade>
         </section>
     );
 }

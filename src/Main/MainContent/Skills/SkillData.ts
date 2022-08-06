@@ -1,13 +1,14 @@
 import {faJsSquare} from "@fortawesome/free-brands-svg-icons";
 import {faReact} from "@fortawesome/free-brands-svg-icons";
 import {faHtml5} from "@fortawesome/free-brands-svg-icons";
-import {faCss3} from "@fortawesome/free-brands-svg-icons";
+// import {faCss3} from "@fortawesome/free-brands-svg-icons";
 import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
 import tsLogo from "./../../../Images/typescript.svg";
 import ReduxLogo from "./../../../Images/Redux.svg";
 import StorybookLogo from "./../../../Images/Storybook.svg";
 import SassLogo from "./../../../Images/Sass_Logo_Color.svg";
 import MuiLogo from "./../../../Images/mui-logo.svg";
+import RestAPI from "./../../../Images/rest.svg";
 
 type DataType = {
     picture: any,
@@ -48,8 +49,8 @@ export const skillsData:skillsDataType = {
             skillDescription: "Something about HTML.",
         },
         {
-            picture: faCss3,
-            skill: "CSS",
+            picture: RestAPI,
+            skill: "REST API",
             skillDescription: "Something about CSS.",
         },
         {

@@ -4,11 +4,13 @@ import {Main} from "./Main/Main";
 
 
 export function App() {
-  return (
-    <div className={"App"}>
-          <Main/>
-    </div>
-  );
+
+
+    return (
+        <div className={"App"}>
+            <Main/>
+        </div>
+    );
 }
 
 export default App;

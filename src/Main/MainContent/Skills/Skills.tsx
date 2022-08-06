@@ -4,11 +4,12 @@ import commonStyle from "../../../Common/Styles/h.module.scss";
 import {SkillsItem} from "./SkillsItem";
 import {skillsData} from "./SkillData"
 import {titles} from "../../../Common/components/CommonData";
-
+import { Fade } from "react-awesome-reveal";
 
 export function Skills() {
     return (
         <section id={"skills"} className={style.skillsBlock}>
+            <Fade cascade={true}>
             <span>
                 <h2 className={commonStyle.h2}>{titles.title2}</h2>
             </span>
@@ -22,7 +23,7 @@ export function Skills() {
                         pictures={item.picture}/>
                     )}
             </div>
-
+            </Fade>
         </section>
     );
 }

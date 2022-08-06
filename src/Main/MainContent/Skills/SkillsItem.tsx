@@ -22,9 +22,9 @@ export function SkillsItem(props: SkillSPropsType) {
                 </h3>
 
                 <div style={{fontSize: "1rem"}}>
-                    <span>
+                    {/*<span>
                         {props.skillsDescription}
-                    </span>
+                    </span>*/}
                 </div>
 
             </div>

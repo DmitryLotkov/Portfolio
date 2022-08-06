@@ -5,11 +5,13 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import Button from "../../../Common/components/Button";
 import {titles} from "../../../Common/components/CommonData";
+import {Fade} from "react-awesome-reveal";
 
 export function Contacts() {
     return (
         <form id={"contacts"}>
-            <h2 className={commonStyle.h2}>My Contacts</h2>
+        <Fade cascade={true}>
+            <h2 className={commonStyle.h2}>{titles.title4}</h2>
             <section className={styles.allForms}>
                 <div className={styles.inputWrapper}>
                     <input className={styles.input} type="text" placeholder="Login"/>
@@ -20,10 +22,11 @@ export function Contacts() {
                     <Button>
                         <FontAwesomeIcon
                             icon={faPaperPlane}/>
-                        <span style={{marginLeft: "10px"}}>{titles.title4}</span>
+                        <span style={{marginLeft: "10px"}}>Submit</span>
                     </Button>
                 </div>
             </section>
+            </Fade>
         </form>
     );
 }
