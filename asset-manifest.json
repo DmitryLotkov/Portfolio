@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.105c1a07.css",
-    "main.js": "/Portfolio/static/js/main.f7d92c50.js",
+    "main.css": "/Portfolio/static/css/main.598219fc.css",
+    "main.js": "/Portfolio/static/js/main.eae5d3b1.js",
     "static/js/787.9b9c0edf.chunk.js": "/Portfolio/static/js/787.9b9c0edf.chunk.js",
     "static/media/MyPhoto.jpg": "/Portfolio/static/media/MyPhoto.7aaf0eb7b6d06f11f970.jpg",
     "static/media/To-DO List React background.png": "/Portfolio/static/media/To-DO List React background.d877940a086493b2f077.png",
@@ -16,12 +16,12 @@
     "static/media/mui-logo.svg": "/Portfolio/static/media/mui-logo.77a82be3302050252b5c7b8fdf19025b.svg",
     "static/media/typescript.svg": "/Portfolio/static/media/typescript.40c24e28253ce90ce7f89763863b55b6.svg",
     "index.html": "/Portfolio/index.html",
-    "main.105c1a07.css.map": "/Portfolio/static/css/main.105c1a07.css.map",
-    "main.f7d92c50.js.map": "/Portfolio/static/js/main.f7d92c50.js.map",
+    "main.598219fc.css.map": "/Portfolio/static/css/main.598219fc.css.map",
+    "main.eae5d3b1.js.map": "/Portfolio/static/js/main.eae5d3b1.js.map",
     "787.9b9c0edf.chunk.js.map": "/Portfolio/static/js/787.9b9c0edf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.105c1a07.css",
-    "static/js/main.f7d92c50.js"
+    "static/css/main.598219fc.css",
+    "static/js/main.eae5d3b1.js"
   ]
 }
