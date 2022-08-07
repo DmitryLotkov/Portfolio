@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 .box {
-    background-color: $secondInnerBlockBackgroundColor;
+    background-color: $whiteColor;
     border-radius: 20px;
     padding: 1.875rem;
     transition: box-shadow .3s ease-in-out;
@@ -12,7 +12,7 @@
     min-width: 700px;
 }
 .inner {
-    background-color: $secondInnerBlockBackgroundColor;
+    background-color: $whiteColor;
     padding: 1.875rem;
     transition: box-shadow .3s ease-in-out;
 }

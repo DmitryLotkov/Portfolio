@@ -29,7 +29,7 @@
       font-family: inherit;
       font-size: inherit;
       line-height: inherit;
-      background-color: $secondInnerBlockBackgroundColor;
+      background-color: $whiteColor;
       @media screen and (max-width: $desktop-dpi-min-width) {
         width: 100%;
       }
@@ -57,7 +57,7 @@
     font-size: inherit;
     line-height: inherit;
     color: $bodyTextColor;
-    background-color: $secondInnerBlockBackgroundColor;
+    background-color: $whiteColor;
   }
 
   :focus {
