@@ -4,7 +4,7 @@
 .aboutMe {
   background-color: $secondInnerBlockBackgroundColor;
   border-radius: 20px 20px 0 0;
-  @media screen and (max-width: $desktop-dpi-max-width) {
+  @media screen and (max-width: $desktop-dpi-min-width) {
     border-radius: 0;
   }
     p {

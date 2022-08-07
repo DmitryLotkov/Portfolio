@@ -1,4 +1,6 @@
 @import "src/Common/Styles/variables";
+@import "src/Common/Styles/constants";
+
 .LastContactContainer {
   display: flex;
   justify-content: center;
@@ -10,7 +12,7 @@
     color: $buttonAndFocusTextColor;
   }
 
-  @media screen and (max-width: 1620px) {
+  @media screen and (max-width: $mobile-min-width) {
     border-radius: 0 !important;
   }
 }

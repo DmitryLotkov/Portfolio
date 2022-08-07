@@ -30,7 +30,7 @@
       font-size: inherit;
       line-height: inherit;
       background-color: $secondInnerBlockBackgroundColor;
-      @media screen and (max-width: $desktop-dpi-max-width) {
+      @media screen and (max-width: $desktop-dpi-min-width) {
         width: 100%;
       }
 

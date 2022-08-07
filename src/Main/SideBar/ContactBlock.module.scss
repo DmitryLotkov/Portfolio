@@ -17,7 +17,7 @@
     flex-wrap: wrap !important;
     font-size: 17px;
   }
-  @media screen and (max-width: $desktop-dpi-max-width) {
+  @media screen and (max-width: $desktop-dpi-min-width) {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -49,7 +49,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-right: 1rem;
-    @media screen and (max-width: 1620px) {
+    @media screen and (max-width:  $desktop-dpi-min-width) {
       margin-bottom: 0.6875rem;
     }
 
