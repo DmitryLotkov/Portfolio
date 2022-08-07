@@ -1,4 +1,6 @@
 @import "src/Common/Styles/variables";
+@import "src/Common/Styles/constants";
+
 .worksContainer {
   width: 100%;
   min-width: 280px;
@@ -26,7 +28,7 @@
       text-decoration: none;
       color: $bodyTextColor;
       margin-bottom: 2rem;
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: $desktop-dpi-middle-width) {
         width: 100% !important;
 
       }

@@ -1,4 +1,5 @@
 @import "src/Common/Styles/variables";
+@import "src/Common/Styles/constants";
 
 .allForms {
   display: flex;
@@ -29,7 +30,7 @@
       font-size: inherit;
       line-height: inherit;
       background-color: $secondInnerBlockBackgroundColor;
-      @media screen and (max-width: 1620px) {
+      @media screen and (max-width: $desktop-dpi-max-width) {
         width: 100%;
       }
 

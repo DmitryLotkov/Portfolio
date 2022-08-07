@@ -1,6 +1,7 @@
 @import "./../../Common/Styles/variables";
+@import "./../../Common/Styles/constants";
 
-@media screen and (max-width: 1620px) {
+@media screen and (max-width: $desktop-dpi-max-width) {
   .slideBlock {
     position: static !important;
     border-radius: 0 !important;

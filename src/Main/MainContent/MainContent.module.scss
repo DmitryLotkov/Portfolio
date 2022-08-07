@@ -1,4 +1,5 @@
 @import "src/Common/Styles/variables";
+@import "src/Common/Styles/constants";
 
 .mainContent {
   background-color: $firstInnerBlockBackgroundColor;
@@ -7,7 +8,7 @@
   z-index: 1;
   margin-bottom: 50px;
   min-width: 280px;
-  @media screen and (max-width: 1620px) {
+  @media screen and (max-width: $desktop-dpi-max-width) {
     border-radius: 0;
     flex-grow: 1;
   }

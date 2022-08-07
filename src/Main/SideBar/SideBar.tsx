@@ -6,6 +6,7 @@ import {ContactBlock} from "./ContactBlock";
 import Button from "../../Common/components/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowAltCircleDown} from "@fortawesome/free-regular-svg-icons";
+import Tilt from 'react-parallax-tilt';
 
 
 export function SideBar() {
@@ -26,8 +27,10 @@ export function SideBar() {
         <aside className={style.aside}>
             <div className={style.slideBlock}>
                 <div className={style.nameAvatar}>
+                    <Tilt>
                     <img className={scroll <= 80 ? style.avatar : style.avatarActive}
                          src={Avatar} alt={"avatar"}/>
+                    </Tilt>
                     <NameAndProf/>
                 </div>
                 <ContactBlock/>

@@ -10,7 +10,6 @@
         background-size: inherit;
         background-color: $bodyBackgroundColor;
         min-height: 100vh;
-        //@include text("Archivo", .9375rem, 400, 1.65, $bodyTextColor);
         @include text("Archivo", 1rem, 400, 1.65, $bodyTextColor);
     }
 }

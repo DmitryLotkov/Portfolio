@@ -1,4 +1,6 @@
 @import "src/Common/Styles/variables";
+@import "src/Common/Styles/constants";
+
 .skillsBlock {
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +27,7 @@
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: $desktop-dpi-middle-width) {
         width: 100%;
       }
 
