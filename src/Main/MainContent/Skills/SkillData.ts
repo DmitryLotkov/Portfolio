@@ -26,52 +26,52 @@ export const skillsData:skillsDataType = {
         {
             picture: faReact,
             skill: "React JS",
-            skillDescription: "Something about React JS.",
+            skillDescription: "A year of experience using React JS hooks to create SPA applications. Familiarity to React class components",
         },
         {
             picture: ReduxLogo,
             skill: "Redux",
-            skillDescription: "Something about Redux.",
+            skillDescription: "Confident understanding of the React-redux architecture concept using Redux-thunks, Redux-ducks rules",
         },
         {
             picture: faJsSquare,
             skill: "JS",
-            skillDescription: "Something about JS.",
+            skillDescription: "Confident knowledge of native JavaScript (ES6+/ events/ Promises/ functional programming/ prototypes). Familiarity to classes",
         },
         {
             picture: tsLogo,
             skill: "TS",
-            skillDescription: "Something about TS.",
+            skillDescription: "A year of practical experience using TypeScript for developing React SPA apps (types, interface, enum). Familiarity to classes",
         },
         {
             picture: faHtml5,
-            skill: "HTML",
-            skillDescription: "Something about HTML.",
+            skill: "HTML5",
+            skillDescription: "Creating an adaptive layout based on figma layouts. Layout of whole projects, landing pages, individual pages, blocks in existing sites",
         },
         {
             picture: RestAPI,
             skill: "REST API",
-            skillDescription: "Something about CSS.",
+            skillDescription: "Using the REST API as the main technology for network requests. Practical experience of using Postman for server testing",
         },
         {
             picture: faCode,
             skill: "Unit testing",
-            skillDescription: "Something about Unit testing.",
+            skillDescription: "Test Driven Development (TDD) approach, unit testing using Jest and React testing library",
         },
         {
             picture: StorybookLogo,
             skill: "StoryBook",
-            skillDescription: "Something about Storybook.",
+            skillDescription: "Familiarity to storyBook component testing, integration snapShot testing",
         },
         {
             picture: SassLogo,
             skill: "Preprocessors",
-            skillDescription: "Something about Preprocessors.",
+            skillDescription: "Experience of using SASS/SCSS preprocessors @mixin/ @extend/ variables/ nesting. Adaptive layout/ flex/ grid",
         },
         {
             picture: MuiLogo,
             skill: "MUI",
-            skillDescription: "Something about MUI.",
+            skillDescription: "Using MIUI framework in everyday job as main framework for styling forms/ tables/ buttons/ icons/ customize mui styles etc",
         },
     ]
 }

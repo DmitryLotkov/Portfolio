@@ -16,13 +16,12 @@ export function AboutMe() {
             <div>
                 <p>
                     I'm frontend developer from Minsk, Belarus, working in web development.
-                    I enjoy turning complex problems into simple, beautiful and intuitive designs.
                 </p>
                 <p>
-                    My job is to build web applications so that it is functional and user-friendly but at the same time
-                    attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and
-                    easy to use. I use modern technologies like as: React JS, Redux Thunk, unit testing, Storybook.
-                    Confident knowledge of native JavaScript and TypeScript.
+                    My job is to build web applications so that it is functional and user-friendly
+                    but at the same time attractive. I use modern technologies like as: React JS, Redux,
+                    Redux Thunk, unit testing, REST API. Confident knowledge of native JavaScript and TypeScript.
+                    My projects with using this technologies are listened in section My Works.
                 </p>
                 <p>
                     Consider options for remote work.
