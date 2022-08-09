@@ -3,8 +3,8 @@ import './App.scss';
 import {Main} from "./Main/Main";
 
 
-export function App() {
 
+export function App() {
 
     return (
         <div className={"App"}>
