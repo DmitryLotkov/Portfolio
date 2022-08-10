@@ -6,8 +6,9 @@ import {faCalendarMinus, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
+import Tooltip from "@mui/material/Tooltip";
 
-import {Tooltip} from "@material-ui/core";
+
 
 
 export function ContactBlock() {

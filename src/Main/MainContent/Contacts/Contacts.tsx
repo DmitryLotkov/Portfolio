@@ -6,8 +6,9 @@ import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import Button from "../../../Common/components/Button";
 import {titles} from "../../../Common/components/CommonData";
 import {Fade} from "react-awesome-reveal";
-import {sendMessage} from "../../../api/emailjs";
 import {useFormik} from "formik";
+import {sendMessageTC} from "../../../state/app-reducer";
+import {useAppDispatch} from "../../../state/store";
 
 type FormikErrorType = {
     email: string
@@ -17,7 +18,7 @@ type FormikErrorType = {
 export type LoginParamsType = FormikErrorType
 
 export function Contacts() {
-
+    const dispatch = useAppDispatch();
     const formik = useFormik({
         validate: (values) => {
             const errors: Partial<FormikErrorType> = {};
@@ -44,8 +45,8 @@ export function Contacts() {
         },
 
         onSubmit: (loginParams: LoginParamsType) => {
-            sendMessage(loginParams)
-            formik.resetForm()
+            dispatch(sendMessageTC(loginParams));
+            formik.resetForm();
         }
     })
     useEffect(() => {
@@ -68,20 +69,20 @@ export function Contacts() {
                 <section className={styles.allForms}>
                     <div className={styles.inputContent}>
                         <div className={styles.inputContent__inputItem}>
-                            <input className={formik.errors.name ? styles.inputError : styles.input} type="text"
+                            <input className={formik.touched.name && formik.errors.name ? styles.inputError : styles.input} type="text"
                                    placeholder="Name" {...formik.getFieldProps("name")}/>
                             {formik.touched.name && formik.errors.name ?
                                 <div className={styles.formikError}>{formik.errors.name}</div> : null}
                         </div>
                         <div className={styles.inputContent__inputItem}>
-                            <input className={formik.errors.email ? styles.inputError : styles.input} type="text"
+                            <input className={formik.touched.email && formik.errors.email ? styles.inputError : styles.input} type="text"
                                    placeholder="Email" {...formik.getFieldProps("email")}/>
                             {formik.touched.email && formik.errors.email ?
                                 <div className={styles.formikError}>{formik.errors.email}</div> : null}
                         </div>
                     </div>
                     <div className={styles.inputContent__textArea}>
-                              <textarea className={formik.errors.message ? styles.textAreaError : styles.textArea}
+                              <textarea className={formik.touched.message && formik.errors.message ? styles.textAreaError : styles.textArea}
                               placeholder="Your Message" {...formik.getFieldProps("message")}/>
                         {formik.touched.message && formik.errors.message ?
                             <div className={styles.formikError}>{formik.errors.message}</div> : null}
