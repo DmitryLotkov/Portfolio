@@ -5,64 +5,96 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 30px;
+  margin-left: 30px;
 
-  .inputWrapper {
+  .inputContent {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
-    margin-right: 15px;
-    margin-left: 15px;
 
-    .input {
-      color: $bodyTextColor;
-      border: 1px solid #e0e0e0;
-      border-radius: 20px;
-      box-shadow: none;
-      height: auto;
-      padding: 0.875rem 1.375rem 0.8125rem;
-      outline: none;
-      margin-right: 15px;
-      margin-left: 15px;
-      flex-grow: 1;
+    .inputContent__inputItem {
+
+      position: relative;
+      width: 48%;
       margin-bottom: 30px;
-      font-family: inherit;
-      font-size: inherit;
-      line-height: inherit;
-      background-color: $whiteColor;
-      @media screen and (max-width: $desktop-dpi-min-width) {
+      @media screen and (max-width: $mobile-max-width) {
         width: 100%;
       }
 
+      .input {
+        width: 100%;
+        color: $bodyTextColor;
+        border: 1px solid #e0e0e0;
+        border-radius: 20px;
+        box-shadow: none;
+        height: auto;
+        padding: 0.875rem 1.375rem 0.8125rem;
+        outline: none;
+
+
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        background-color: $whiteColor;
+
+        @media screen and (max-width: $desktop-dpi-min-width) {
+          width: 100%;
+        }
+      }
+
+      :focus {
+        border: 1px solid $buttonAndFocusTextColor;
+      }
+    }
+
+    .inputError {
+      @extend .input;
+      border: 1px solid $errorColor !important;
+    }
+  }
+
+  .formikError {
+    position: absolute;
+    color: $errorColor;
+    top: calc(100% + 13px);
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
+  .inputContent__textArea {
+    position: relative;
+    margin-bottom: 1.7rem;
+
+    .textArea {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      padding: 0.8125rem 1.1875rem;
+      resize: none;
+      outline: none;
+      height: 200px;
+      box-shadow: none;
+      border: 1px solid #e0e0e0;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: $bodyTextColor;
+      background-color: $whiteColor;
     }
 
     :focus {
       border: 1px solid $buttonAndFocusTextColor;
     }
 
+    .textAreaError {
+      @extend .textArea;
+      border: 1px solid $errorColor;
+    }
   }
 
-  .textArea {
-    border-radius: 20px;
-    display: block;
-    padding: 0.8125rem 1.1875rem;
-    resize: none;
-    margin-right: 30px;
-    margin-left: 30px;
-    outline: none;
-    height: 200px;
-    box-shadow: none;
-    border: 1px solid #e0e0e0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: $bodyTextColor;
-    background-color: $whiteColor;
-  }
-
-  :focus {
-    border: 1px solid $buttonAndFocusTextColor;
-  }
 }
 
 

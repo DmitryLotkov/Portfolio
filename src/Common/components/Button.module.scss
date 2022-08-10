@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+
     :hover {
         transform: scale(1.1)
     }
@@ -18,7 +18,6 @@
         font-weight: 400;
         line-height: inherit;
         padding: 0.5rem 2rem 0.5rem;
-       /* position: relative;*/
         transition: .4s ease-in-out;
         text-transform: none;
         width: max-content;
