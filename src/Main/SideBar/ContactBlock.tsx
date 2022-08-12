@@ -2,7 +2,7 @@ import React from 'react';
 import style from "./ContactBlock.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMapMarkerAlt} from "@fortawesome/free-solid-svg-icons/faMapMarkerAlt";
-import {faCalendarMinus, faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
@@ -14,12 +14,12 @@ import Tooltip from "@mui/material/Tooltip";
 export function ContactBlock() {
     return (
         <div className={style.contactsBlock}>
-                <Tooltip title={"Birthday"} placement="top" arrow={true}>
+                {/*<Tooltip title={"Birthday"} placement="top" arrow={true}>
                     <div className={style.contactsBlockItem}>
                         <FontAwesomeIcon className={style.icon} icon={faCalendarMinus}/>
                         December 7, 1991
                     </div>
-                </Tooltip>
+                </Tooltip>*/}
 
                 <Tooltip title={"Address"} placement="top" arrow={true}>
                     <div className={style.contactsBlockItem}>

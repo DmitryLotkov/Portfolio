@@ -34,12 +34,14 @@ export function SideBar() {
                     <NameAndProf/>
                 </div>
                 <ContactBlock/>
-                <Button>
+                <a href={"https://mega.nz/file/Zghh2brD#QhmMISKozZzNF1RBG8A8CZiYWJSM8jfeH4vBm0dnR9Y"}>
+                <Button >
                     <span style={{marginRight: "10px"}}>
                         <FontAwesomeIcon icon={faArrowAltCircleDown}/>
                     </span>
                     Download CV
                 </Button>
+                </a>
             </div>
         </aside>
     );

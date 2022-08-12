@@ -7,9 +7,9 @@ import {Loader} from "./Common/components/Loader";
 
 
 
+
 export function App() {
     const appStatus = useAppSelector<RequestStatusType>(state => state.appReducer.status);
-    console.log(appStatus)
 
     return (
         <div className={"App"}>

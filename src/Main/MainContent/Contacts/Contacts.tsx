@@ -66,7 +66,7 @@ export function Contacts() {
         <form onSubmit={formik.handleSubmit}>
             <Fade cascade={true}>
                 <h2 className={commonStyle.h2}>{titles.title4}</h2>
-                <section className={styles.allForms}>
+                <section className={styles.allForms} id={"contacts"}>
                     <div className={styles.inputContent}>
                         <div className={styles.inputContent__inputItem}>
                             <input className={formik.touched.name && formik.errors.name ? styles.inputError : styles.input} type="text"

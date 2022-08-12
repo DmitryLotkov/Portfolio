@@ -7,6 +7,7 @@
     border-radius: 0 !important;
     width: 100%;
     box-shadow: 0 0 !important;
+
   }
   .aside {
     flex: 1 0 72.4% !important;
@@ -38,7 +39,9 @@
     min-width: 280px;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05);
     overflow: visible;
-
+    a{
+      text-decoration: none;
+    }
     .nameAvatar {
       background-color: $whiteColor;
       border-radius: 20px 20px 0 0;
