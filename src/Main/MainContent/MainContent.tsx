@@ -6,6 +6,7 @@ import CommonStyles from "../../Common/Styles/Box.module.scss"
 import {Contacts} from "./Contacts/Contacts";
 import {Works} from "./Works/Works";
 import {Footer} from "../../Footer/Footer";
+import {ModalUp} from "../../upModal";
 
 
 export function MainContent() {
@@ -17,6 +18,7 @@ export function MainContent() {
             <Works/>
             <Contacts/>
             <Footer/>
+            <ModalUp/>
         </div>
     );
 }

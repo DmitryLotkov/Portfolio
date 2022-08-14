@@ -34,19 +34,14 @@ export const ModalUp: React.FC<IModalUp> = ({speed = 10}) => {
     return (
         <>
             <Modal
-                enableBackground={false}
-                width={50}
-                height={50}
+                enableBackground={true}
                 modalOnClick={scroll}
                 modalStyle={{
                     top: '80vh',
-                    left: '20px',
                 }}
-
                 show={show}
             >
                 <img src={arrow} alt={"upModalArrow"}/>
-
             </Modal>
         </>
     );

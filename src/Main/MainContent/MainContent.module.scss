@@ -8,6 +8,8 @@
   z-index: 1;
   margin-bottom: 50px;
   min-width: 280px;
+  position: relative;
+
   @media screen and (max-width: $desktop-dpi-min-width) {
     border-radius: 0;
     flex-grow: 1;
