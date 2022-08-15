@@ -34,7 +34,7 @@ export const ModalUp: React.FC<IModalUp> = ({speed = 10}) => {
     return (
         <>
             <Modal
-                enableBackground={true}
+                enableBackground={false}
                 modalOnClick={scroll}
                 modalStyle={{
                     top: '80vh',

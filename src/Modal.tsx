@@ -1,5 +1,6 @@
 import React, {CSSProperties} from 'react';
 import style from "./modalStyle.module.scss"
+
 interface IModal {
     enableBackground?: boolean;
     backgroundStyle?: CSSProperties;
