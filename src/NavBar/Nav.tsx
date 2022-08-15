@@ -23,7 +23,7 @@ export function Nav() {
 
     return (
 
-        <div className={style.nav} ref={menuRef} >
+        <div className={style.nav} ref={menuRef}>
             <BurgerMenu setMenuActive={setMenuIsActive}
                         menuIsActive={menuIsActive}
                         items={burgerMenuItems}/>

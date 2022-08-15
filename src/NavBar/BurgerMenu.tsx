@@ -10,12 +10,12 @@ type burgerMenuPropsType = {
     setMenuActive: Dispatch<SetStateAction<boolean>>
     menuIsActive: boolean
 }
-export const BurgerMenu = ({items, menuIsActive, setMenuActive}: burgerMenuPropsType) => {
+export const BurgerMenu = ({items, menuIsActive}: burgerMenuPropsType) => {
 
     return (
         <div className={menuIsActive ? style.burgerMenu : style.burgerMenuActive } onClick={e => e.stopPropagation() }>
             {items.map(item =>
-                <HashLink key={item.id} smooth to={menuIsActive ?  item.path: "" }>
+                <HashLink key={item.id} smooth to={item.path}>
                     {item.value}
                 </HashLink>)}
         </div>
