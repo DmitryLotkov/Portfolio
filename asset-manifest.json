@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.30472b43.css",
-    "main.js": "/Portfolio/static/js/main.c8767a81.js",
+    "main.js": "/Portfolio/static/js/main.815fa8c1.js",
     "static/js/787.9b9c0edf.chunk.js": "/Portfolio/static/js/787.9b9c0edf.chunk.js",
     "static/media/MyPhoto.jpg": "/Portfolio/static/media/MyPhoto.7aaf0eb7b6d06f11f970.jpg",
     "static/media/To-DO List React background.png": "/Portfolio/static/media/To-DO List React background.d877940a086493b2f077.png",
     "static/media/card project image.png": "/Portfolio/static/media/card project image.11e49de3a0d9de3db5b9.png",
     "static/media/SN.svg": "/Portfolio/static/media/SN.da2537d2ff4f207487e1b0cd000d91c4.svg",
+    "static/media/codewars-svgrepo-com.svg": "/Portfolio/static/media/codewars-svgrepo-com.7e599f63fcc717330bf9481d1164b309.svg",
     "static/media/rest.svg": "/Portfolio/static/media/rest.5ee45ed133a77aa2f782f849b8d9c745.svg",
     "static/media/jest-svgrepo-com.svg": "/Portfolio/static/media/jest-svgrepo-com.3058305caded246d546a627978c04439.svg",
     "static/media/ReactLogo.svg": "/Portfolio/static/media/ReactLogo.0aaa0c2b1e49542847c72d08f44d4056.svg",
@@ -20,11 +21,11 @@
     "static/media/typescript-svgrepo-com.svg": "/Portfolio/static/media/typescript-svgrepo-com.005c557ee55289617a8f8a6deac086eb.svg",
     "index.html": "/Portfolio/index.html",
     "main.30472b43.css.map": "/Portfolio/static/css/main.30472b43.css.map",
-    "main.c8767a81.js.map": "/Portfolio/static/js/main.c8767a81.js.map",
+    "main.815fa8c1.js.map": "/Portfolio/static/js/main.815fa8c1.js.map",
     "787.9b9c0edf.chunk.js.map": "/Portfolio/static/js/787.9b9c0edf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30472b43.css",
-    "static/js/main.c8767a81.js"
+    "static/js/main.815fa8c1.js"
   ]
 }
