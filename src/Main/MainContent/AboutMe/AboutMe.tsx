@@ -15,7 +15,7 @@ export function AboutMe() {
             </span>
             <div>
                 <p>
-                    I'm frontend developer from Minsk, Belarus, working in web development.
+                    Hello, I'm frontend developer from Minsk, Belarus, working in web development.
                 </p>
                 <p>
                     My job is to build web applications so that it is functional and user-friendly

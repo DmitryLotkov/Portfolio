@@ -1,11 +1,11 @@
 import React from 'react';
 import style from "./ContactBlock.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import codeWarsIcon from "../../../src/Images/codewars-svgrepo-com.svg";
 import {faMapMarkerAlt} from "@fortawesome/free-solid-svg-icons/faMapMarkerAlt";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
-import {faCode} from "@fortawesome/free-solid-svg-icons/faCode";
 import Tooltip from "@mui/material/Tooltip";
 
 
@@ -48,7 +48,7 @@ export function ContactBlock() {
 
                 <Tooltip title={"GitHub"} placement="top" arrow={true}>
                     <div className={style.contactsBlockItem}>
-                        <FontAwesomeIcon className={style.icon} icon={faGithub}/>
+                        <FontAwesomeIcon size={"lg"} className={style.icon} icon={faGithub}/>
                         <a href="https://github.com/DmitryLotkov">
                             My GitHub
                         </a>
@@ -57,7 +57,7 @@ export function ContactBlock() {
 
                 <Tooltip title={"CodeWars"} placement="top" arrow={true}>
                     <div className={style.lastContactBlockItem}>
-                        <FontAwesomeIcon className={style.icon} icon={faCode}/>
+                        <img className={style.icon} src={codeWarsIcon} alt={"codeWarsIcon"}/>
                         <a  href="https://www.codewars.com/dashboard">
                             My CodeWars
                         </a>
