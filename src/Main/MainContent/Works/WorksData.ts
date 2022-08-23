@@ -18,7 +18,7 @@ export const content = {
             href: "https://DmitryLotkov.github.io/My-Social-Network",
         },
         {
-            title: "Flash Cards ReactJS App",
+            title: "Education slips ReactJS App",
             description: "An application that will help you learn and memorize new information more easily",
             src: cards,
             href: "https://Trivium-bit.github.io/cards-triv",
