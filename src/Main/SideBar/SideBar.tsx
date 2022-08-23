@@ -34,7 +34,7 @@ export function SideBar() {
                     <NameAndProf/>
                 </div>
                 <ContactBlock/>
-                <a href={"https://mega.nz/file/Zghh2brD#QhmMISKozZzNF1RBG8A8CZiYWJSM8jfeH4vBm0dnR9Y"}>
+                <a href={"https://mega.nz/file/gtIVEKbK#CSzKbsPPHF7LI2C7UvO9AH0gaAPK2FQbVx8wnWq7Gq4"}>
                 <Button >
                     <span style={{marginRight: "10px"}}>
                         <FontAwesomeIcon icon={faArrowAltCircleDown}/>
