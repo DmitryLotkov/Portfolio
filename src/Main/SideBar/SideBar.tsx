@@ -13,15 +13,14 @@ export function SideBar() {
     const [scroll, setScroll] = useState<number>(0);
 
     useEffect(() => {
-        document.addEventListener("scroll", scrollHandler);
+        const scrollHandler = () => {
+            setScroll(document.documentElement.scrollTop);
+        };
+        window.addEventListener("scroll", scrollHandler);
         return () => {
-            document.addEventListener("scroll", scrollHandler);
-        }
-    }, [])
-    const scrollHandler = (e: any) => {
-        setScroll(e.target.documentElement.scrollTop);
-    }
-
+            window.removeEventListener("scroll", scrollHandler);
+        };
+    }, []);
 
     return (
         <aside className={style.aside}>
@@ -34,14 +33,17 @@ export function SideBar() {
                     <NameAndProf/>
                 </div>
                 <ContactBlock/>
-                <a href={"https://mega.nz/file/gtIVEKbK#CSzKbsPPHF7LI2C7UvO9AH0gaAPK2FQbVx8wnWq7Gq4"}>
-                <Button >
+                <Button
+                    as="a"
+                    href="https://mega.nz/file/gtIVEKbK#CSzKbsPPHF7LI2C7UvO9AH0gaAPK2FQbVx8wnWq7Gq4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <span style={{marginRight: "10px"}}>
                         <FontAwesomeIcon icon={faArrowAltCircleDown}/>
                     </span>
                     Download CV
                 </Button>
-                </a>
             </div>
         </aside>
     );

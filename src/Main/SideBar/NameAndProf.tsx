@@ -1,6 +1,6 @@
 import React from 'react';
-import style from "./NameAndProf.module.scss"
-import ReactTypingEffect from 'react-typing-effect'
+import style from "./NameAndProf.module.scss";
+import { Typewriter } from "../../Common/components/Typewriter";
 
 export function NameAndProf() {
     return (
@@ -9,7 +9,7 @@ export function NameAndProf() {
                 <span className={style.textWeight}>Dmitry</span> Lotkov
             </h3>
             <div className={style.professionName}>
-                <ReactTypingEffect text={"Frontend Developer"}/>
+                <Typewriter text={"Frontend Developer"} />
             </div>
         </div>
     );

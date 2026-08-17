@@ -1,29 +1,25 @@
-import React, {ButtonHTMLAttributes, DetailedHTMLProps} from 'react'
-import style from './Button.module.scss'
+import React, { ElementType } from 'react';
+import style from './Button.module.scss';
+import { ButtonProps } from './Button.types';
 
-
-// тип пропсов обычной кнопки, children в котором хранится название кнопки там уже описан
-type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
-
-type SuperButtonPropsType = DefaultButtonPropsType & {
-    red?: boolean
-}
-
-const Button: React.FC<SuperButtonPropsType> = (
-    {
-        red, className,
-        ...restProps// все остальные пропсы попадут в объект restProps, там же будет children
-    }
-) => {
+export const Button = <T extends ElementType = 'button'>({
+    as,
+    red,
+    className,
+    children,
+    ...restProps
+}: ButtonProps<T>) => {
+    const Component = as || 'button';
+    const combinedClassName = `${style.sentButton} ${red ? style.red : ''} ${className || ''}`.trim();
 
     return (
         <div className={style.buttonWrapper}>
-            <button
-                className={style.sentButton}
-                {...restProps} // отдаём кнопке остальные пропсы если они есть (children там внутри)
-            />
+            <Component className={combinedClassName} {...restProps}>
+                {children}
+            </Component>
         </div>
-    )
-}
+    );
+};
 
-export default Button
+export default Button;
+

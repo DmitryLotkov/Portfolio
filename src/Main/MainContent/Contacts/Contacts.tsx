@@ -1,26 +1,26 @@
-import commonStyle from "../../../Common/Styles/h.module.scss";
-import React, {useEffect} from "react";
-import styles from "./Contacts.module.scss"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane";
-import Button from "../../../Common/components/Button";
-import {titles} from "../../../Common/components/CommonData";
-import {Fade} from "react-awesome-reveal";
-import {useFormik} from "formik";
-import {sendMessageTC} from "../../../state/app-reducer";
-import {useAppDispatch} from "../../../state/store";
+import commonStyle from '../../../Common/Styles/h.module.scss';
+import React from 'react';
+import styles from './Contacts.module.scss';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+import Button from '../../../Common/components/Button';
+import {titles} from '../../../Common/components/CommonData';
+import {Fade} from 'react-awesome-reveal';
+import {useFormik} from 'formik';
+import {sendMessageTC} from '../../../state/app-reducer';
+import {useAppDispatch} from '../../../state/store';
 
 type FormikErrorType = {
-    email: string
-    name: string
-    message: string
-}
-export type LoginParamsType = FormikErrorType
+    email: string;
+    name: string;
+    message: string;
+};
+export type LoginParamsType = FormikErrorType;
 
 export function Contacts() {
     const dispatch = useAppDispatch();
     const formik = useFormik({
-        validate: (values) => {
+        validate: (values: FormikErrorType) => {
             const errors: Partial<FormikErrorType> = {};
             if (!values.email) {
                 errors.email = 'Email required';
@@ -28,74 +28,81 @@ export function Contacts() {
                 errors.email = 'Invalid email address';
             }
             if (values.name.length < 5) {
-                errors.message = "Invalid password message"
+                errors.name = 'Name must be 5 characters or more';
             }
-            if (!values.name) {
-                errors.name = "Name required"
-            }
-            if (!values.message) {
-                errors.message = "Message required"
+            if (values.message.length < 15) {
+                errors.message = 'Message must be 15 characters or more';
             }
             return errors;
         },
         initialValues: {
-            name: "",
-            email: "",
-            message: "",
+            email: '',
+            name: '',
+            message: '',
         },
-
-        onSubmit: (loginParams: LoginParamsType) => {
-            dispatch(sendMessageTC(loginParams));
+        onSubmit: (values: FormikErrorType) => {
+            dispatch(sendMessageTC(values));
             formik.resetForm();
-        }
-    })
-    useEffect(() => {
-        const listener = (event: KeyboardEvent) => {
-            if (event.code === "Enter" || event.code === "NumpadEnter") {
-                event.preventDefault();
-                formik.handleSubmit()
-            }
-        };
-        document.addEventListener("keydown", listener);
-        return () => {
-            document.removeEventListener("keydown", listener);
-        };
-    }, [formik]);
+        },
+    });
 
     return (
-        <form onSubmit={formik.handleSubmit}>
-            <Fade cascade={true}>
-                <h2 className={commonStyle.h2}>{titles.title4}</h2>
-                <section className={styles.allForms} id={"contacts"}>
-                    <div className={styles.inputContent}>
-                        <div className={styles.inputContent__inputItem}>
-                            <input className={formik.touched.name && formik.errors.name ? styles.inputError : styles.input} type="text"
-                                   placeholder="Name" {...formik.getFieldProps("name")}/>
-                            {formik.touched.name && formik.errors.name ?
-                                <div className={styles.formikError}>{formik.errors.name}</div> : null}
-                        </div>
-                        <div className={styles.inputContent__inputItem}>
-                            <input className={formik.touched.email && formik.errors.email ? styles.inputError : styles.input} type="text"
-                                   placeholder="Email" {...formik.getFieldProps("email")}/>
-                            {formik.touched.email && formik.errors.email ?
-                                <div className={styles.formikError}>{formik.errors.email}</div> : null}
-                        </div>
-                    </div>
-                    <div className={styles.inputContent__textArea}>
-                              <textarea className={formik.touched.message && formik.errors.message ? styles.textAreaError : styles.textArea}
-                              placeholder="Your Message" {...formik.getFieldProps("message")}/>
-                        {formik.touched.message && formik.errors.message ?
-                            <div className={styles.formikError}>{formik.errors.message}</div> : null}
-                    </div>
-
-                        <Button type={"submit"}>
-                            <FontAwesomeIcon
-                                icon={faPaperPlane}/>
-                            <span style={{marginLeft: "10px"}}>Submit</span>
-                        </Button>
-
-                </section>
-            </Fade>
-        </form>
+        <section className={styles.contacts} id={'contacts'}>
+            <div className={styles.contactsContainer}>
+                <div className={styles.title}>
+                    <Fade direction={'down'} duration={1200} triggerOnce={true}>
+                        <h2 className={commonStyle.h2}>{titles.title4}</h2>
+                    </Fade>
+                </div>
+                <div className={styles.formContainer}>
+                    <Fade direction={'up'} duration={1200} triggerOnce={true}>
+                        <form className={styles.form} onSubmit={formik.handleSubmit}>
+                            <div className={styles.inputContainer}>
+                                <div className={styles.inputMessageBlock}>
+                                    <input
+                                        placeholder={'Your Name'}
+                                        type='text'
+                                        className={formik.errors.name && formik.touched.name ? styles.inputError : styles.input}
+                                        {...formik.getFieldProps('name')}
+                                    />
+                                    {formik.touched.name && formik.errors.name && (
+                                        <div className={styles.errorMessage}>{formik.errors.name}</div>
+                                    )}
+                                </div>
+                                <div className={styles.inputMessageBlock}>
+                                    <input
+                                        placeholder={'Your Email'}
+                                        type='text'
+                                        className={formik.errors.email && formik.touched.email ? styles.inputError : styles.input}
+                                        {...formik.getFieldProps('email')}
+                                    />
+                                    {formik.touched.email && formik.errors.email && (
+                                        <div className={styles.errorMessage}>{formik.errors.email}</div>
+                                    )}
+                                </div>
+                            </div>
+                            <div className={styles.inputMessageBlock}>
+                                <textarea
+                                    placeholder={'Your Message'}
+                                    className={formik.errors.message && formik.touched.message ? styles.inputError : styles.textarea}
+                                    {...formik.getFieldProps('message')}
+                                />
+                                {formik.touched.message && formik.errors.message && (
+                                    <div className={styles.errorMessage}>{formik.errors.message}</div>
+                                )}
+                            </div>
+                            <div className={styles.button}>
+                                <Button type={'submit'} disabled={!formik.isValid}>
+                                    <span style={{marginRight: '10px'}}>
+                                        <FontAwesomeIcon icon={faPaperPlane}/>
+                                    </span>
+                                    Send Message
+                                </Button>
+                            </div>
+                        </form>
+                    </Fade>
+                </div>
+            </div>
+        </section>
     );
 }

@@ -1,8 +1,7 @@
-import CircularProgress from '@mui/material/CircularProgress/CircularProgress';
+﻿import CircularProgress from '@mui/material/CircularProgress';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import styles from "./Loader.module.scss"
+import styles from './Loader.module.scss';
 
 export const Loader = () => {
     return (
@@ -13,7 +12,5 @@ export const Loader = () => {
                     <CircularProgress size={50}/>
                 </div>
             </>, document.body)
-
     );
 };
-

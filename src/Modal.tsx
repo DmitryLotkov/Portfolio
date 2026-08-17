@@ -1,5 +1,5 @@
 import React, {CSSProperties} from 'react';
-import style from "./modalStyle.module.scss"
+import style from "./modalStyle.module.scss";
 
 interface IModal {
     enableBackground?: boolean;
@@ -7,7 +7,8 @@ interface IModal {
     backgroundOnClick?: () => void;
     modalStyle?: CSSProperties;
     modalOnClick?: () => void;
-    show: boolean
+    show: boolean;
+    children?: React.ReactNode;
 }
 
 export const Modal: React.FC<IModal> = (
@@ -50,4 +51,3 @@ export const Modal: React.FC<IModal> = (
         </>
     );
 };
-
