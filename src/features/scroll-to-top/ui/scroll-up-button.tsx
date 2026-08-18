@@ -6,30 +6,26 @@ import { ScrollUpButtonProps } from '@/features';
 export const ScrollUpButton: React.FC<ScrollUpButtonProps> = () => {
     const [show, setShow] = useState(false);
 
-    const handleScroll = () => {
-        if (window.scrollY > 300) setShow(true);
-        else setShow(false);
-    };
+    useEffect(() => {
+        const handleScroll = () => {
+            setShow(window.scrollY > 300);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    if (!show) return null;
-
     return (
         <button
             type="button"
-            className={styles.scrollUpButton}
+            className={`${styles.scrollUpButton} ${show ? styles.visible : ''}`}
             onClick={scrollToTop}
             aria-label="Scroll to top"
         >
-            <img src={arrow} alt="Scroll up arrow" />
+            <img src={arrow} alt="" aria-hidden="true" />
         </button>
     );
 };
