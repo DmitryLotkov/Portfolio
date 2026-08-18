@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import arrow from '@/shared/assets/icons/up-arrow.svg';
 import styles from './scroll-up-button.module.scss';
-import { ScrollUpButtonProps } from './scroll-up-button.types';
+import { ScrollUpButtonProps } from '@/features';
 
 export const ScrollUpButton: React.FC<ScrollUpButtonProps> = () => {
     const [show, setShow] = useState(false);

@@ -1,20 +1,23 @@
-@use '@/shared/styles/variables' as *;
-@use '@/shared/styles/constants' as *;
+@use '@/shared/styles/variables';
+@use '@/shared/styles/constants';
+@use '@/shared/styles/mixins';
 
 .LastContactContainer {
     display: flex;
     justify-content: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: $whiteColor;
+    background-color: variables.$whiteColor;
     border-radius: 0 0 20px 20px;
 
     &:hover {
-        color: $blueColor;
+        color: variables.$blueColor;
     }
+}
 
-    @media screen and (max-width: $mobile-min-width) {
-        border-radius: 0 !important;
+@include mixins.media-down(constants.$mobile-min-width) {
+    .LastContactContainer {
+        border-radius: 0;
     }
 }
 

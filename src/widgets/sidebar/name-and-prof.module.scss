@@ -1,4 +1,4 @@
-@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/variables';
 
 .nameAndProf {
     text-align: center;
@@ -19,8 +19,8 @@
     }
 
     .professionName {
-        background-color: $bodyBackgroundColor;
-        color: $bodyTextColor;
+        background-color: variables.$bodyBackgroundColor;
+        color: variables.$bodyTextColor;
         display: inline-block;
         line-height: 1;
         text-align: center;

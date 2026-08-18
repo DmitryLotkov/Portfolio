@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import style from './skill-card.module.scss';
-import { SkillCardProps } from '../model/types';
+import { SkillCardProps } from '@/entities';
 
 export function SkillCard({ skills, skillsDescription, pictures }: SkillCardProps) {
     return (

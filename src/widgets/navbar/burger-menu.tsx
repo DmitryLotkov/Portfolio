@@ -1,6 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
 import style from './nav.module.scss';
-import { BurgerMenuProps } from './burger-menu.types';
+import { BurgerMenuProps } from '@/widgets';
 
 export const BurgerMenu = ({ items, menuIsActive }: BurgerMenuProps) => {
     return (

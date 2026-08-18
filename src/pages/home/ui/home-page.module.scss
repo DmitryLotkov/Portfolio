@@ -1,5 +1,6 @@
-@use '@/shared/styles/variables' as *;
-@use '@/shared/styles/constants' as *;
+@use '@/shared/styles/variables';
+@use '@/shared/styles/constants';
+@use '@/shared/styles/mixins';
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -14,24 +15,26 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 1100px;
-
-    @media screen and (max-width: $desktop-dpi-min-width) {
-        width: max-content;
-        max-width: 100%;
-        padding-top: 0;
-    }
 }
 
 .mainContent {
-    background-color: $firstInnerBlockBackgroundColor;
+    background-color: variables.$firstInnerBlockBackgroundColor;
     width: 72%;
     border-radius: 20px;
     z-index: 1;
     margin-bottom: 50px;
     min-width: 280px;
     position: relative;
+}
 
-    @media screen and (max-width: $desktop-dpi-min-width) {
+@include mixins.media-down(constants.$desktop-dpi-min-width) {
+    .homePage {
+        width: max-content;
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    .mainContent {
         border-radius: 0;
         flex-grow: 1;
     }

@@ -1,4 +1,4 @@
-@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/variables';
 
 .buttonWrapper {
     display: flex;
@@ -10,11 +10,11 @@
     }
 
     .sentButton {
-        background-color: $blueColor;
+        background-color: variables.$blueColor;
         border-radius: 20px;
         border: 0;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
-        color: $whiteColor;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        color: variables.$whiteColor;
         cursor: pointer;
         font-size: 1rem;
         font-weight: 400;
@@ -26,7 +26,7 @@
         -webkit-tap-highlight-color: transparent;
 
         &:active {
-            box-shadow: 11px 10px 55px 9px rgba(34, 60, 80, 0.65) !important;
+            box-shadow: 11px 10px 55px 9px rgba(34, 60, 80, 0.65);
         }
 
         &:hover {

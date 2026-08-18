@@ -1,5 +1,6 @@
-@use '@/shared/styles/variables' as *;
-@use '@/shared/styles/constants' as *;
+@use '@/shared/styles/variables';
+@use '@/shared/styles/constants';
+@use '@/shared/styles/mixins';
 
 .nav {
     display: flex;
@@ -11,52 +12,58 @@
     flex-wrap: wrap;
     overflow: hidden;
 
-    .hamburger {
-        > div {
-            background-color: $blueColor;
-            color: $whiteColor;
-            border-radius: 24px;
-
-            @media screen and (max-width: $mobile-middle-width) {
-                display: none;
-            }
-        }
-    }
-
     a {
         text-decoration: none;
-        color: $bodyTextColor;
+        color: variables.$bodyTextColor;
     }
+}
 
-    .menuButton {
-        margin-left: 1rem;
-        display: flex;
-        cursor: pointer;
-        overflow: hidden;
+.hamburger {
+    > div {
+        background-color: variables.$blueColor;
+        color: variables.$whiteColor;
+        border-radius: 24px;
     }
+}
 
-    .burgerMenu {
-        transition: 0.6s;
-        width: 300px;
-        display: flex;
-        justify-content: space-between;
-        cursor: pointer;
-        transform: translateX(-20px);
+.menuButton {
+    margin-left: 1rem;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.burgerMenu {
+    transition: transform 0.6s ease;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transform: translateX(-20px);
+}
+
+.burgerMenuActive {
+    @extend .burgerMenu;
+    cursor: auto;
+    transform: translateX(400px);
+}
+
+@include mixins.media-down(constants.$mobile-middle-width) {
+    .hamburger {
+        > div {
+            display: none;
+        }
     }
 
     .burgerMenuActive {
-        @extend .burgerMenu;
-        cursor: auto;
-        transform: translateX(400px);
+        transform: translateX(0);
+    }
+}
 
-        @media screen and (max-width: $mobile-middle-width) {
-            transform: translateX(0);
-        }
-
-        @media screen and (max-width: $mobile-min-width) {
-            transform: translateX(0);
-            font-size: 14px;
-        }
+@include mixins.media-down(constants.$mobile-min-width) {
+    .burgerMenuActive {
+        transform: translateX(0);
+        font-size: 14px;
     }
 }
 

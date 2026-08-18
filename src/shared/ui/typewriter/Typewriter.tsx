@@ -1,6 +1,6 @@
 import { useTypewriter } from '@/shared/hooks';
 import styles from './typewriter.module.scss';
-import { TypewriterProps } from './typewriter.types';
+import { TypewriterProps } from '@/shared';
 
 export const Typewriter = ({
     text,

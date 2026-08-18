@@ -1,5 +1,5 @@
 import style from './work-card.module.scss';
-import { WorkCardProps } from '../model/types';
+import { WorkCardProps } from '@/entities';
 
 export function WorkCard({ description, title, src, href }: WorkCardProps) {
     return (

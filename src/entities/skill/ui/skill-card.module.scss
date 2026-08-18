@@ -1,10 +1,11 @@
-@use '@/shared/styles/variables' as *;
-@use '@/shared/styles/constants' as *;
+@use '@/shared/styles/variables';
+@use '@/shared/styles/constants';
+@use '@/shared/styles/mixins';
 
 .skillsItem {
     min-width: calc(50% - 30px);
     width: calc(50% - 30px);
-    background-color: $whiteColor;
+    background-color: variables.$whiteColor;
     margin-bottom: 30px;
     padding: 30px 30px 24px 20px;
     margin-right: 15px;
@@ -14,10 +15,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-
-    @media screen and (max-width: $desktop-dpi-middle-width) {
-        width: 100%;
-    }
 }
 
 .image {
@@ -40,4 +37,10 @@
 
 .skillTitle {
     font-size: 1rem;
+}
+
+@include mixins.media-down(constants.$desktop-dpi-middle-width) {
+    .skillsItem {
+        width: 100%;
+    }
 }

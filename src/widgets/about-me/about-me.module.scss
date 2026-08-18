@@ -1,18 +1,21 @@
-@use '@/shared/styles/variables' as *;
-@use '@/shared/styles/constants' as *;
+@use '@/shared/styles/variables';
+@use '@/shared/styles/constants';
+@use '@/shared/styles/mixins';
 
 .aboutMe {
-    background-color: $whiteColor;
+    background-color: variables.$whiteColor;
     border-radius: 20px 20px 0 0;
-
-    @media screen and (max-width: $desktop-dpi-min-width) {
-        border-radius: 0;
-    }
 
     p {
         text-align: justify;
         margin: 5px 0;
         font-size: 1.125rem;
+    }
+}
+
+@include mixins.media-down(constants.$desktop-dpi-min-width) {
+    .aboutMe {
+        border-radius: 0;
     }
 }
 

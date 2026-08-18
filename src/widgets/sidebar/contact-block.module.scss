@@ -1,26 +1,54 @@
-@use '@/shared/styles/variables' as *;
-@use '@/shared/styles/constants' as *;
+@use '@/shared/styles/variables';
+@use '@/shared/styles/constants';
+@use '@/shared/styles/mixins';
 
 .contactsBlock {
-    background-color: $firstInnerBlockBackgroundColor;
+    background-color: variables.$firstInnerBlockBackgroundColor;
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     margin-bottom: 1rem;
+}
 
-    @media screen and (max-width: $mobile-max-width) {
-        background-color: $firstInnerBlockBackgroundColor;
-        padding-top: 1rem;
-        margin-left: 1.875rem;
-        display: flex;
-        flex-direction: column !important;
-        flex-wrap: wrap !important;
-        font-size: 17px;
+.contactsBlockItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6875rem;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+
+    .icon {
+        margin-right: 0.875rem;
     }
 
-    @media screen and (max-width: $desktop-dpi-min-width) {
+    a {
+        color: variables.$bodyTextColor;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+.lastContactBlockItem {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+
+    .icon {
+        margin-right: 0.875rem;
+    }
+
+    a {
+        color: variables.$bodyTextColor;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+@include mixins.media-down(constants.$desktop-dpi-min-width) {
+    .contactsBlock {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -28,43 +56,16 @@
         padding-right: 1rem;
     }
 
-    .contactsBlockItem {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.6875rem;
-        flex-wrap: wrap;
-        margin-right: 1rem;
-
-        .icon {
-            margin-right: 0.875rem;
-        }
-
-        a {
-            color: #44566c;
-            cursor: pointer;
-            text-decoration: none;
-        }
-    }
-
     .lastContactBlockItem {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-right: 1rem;
+        margin-bottom: 0.6875rem;
+    }
+}
 
-        @media screen and (max-width: $desktop-dpi-min-width) {
-            margin-bottom: 0.6875rem;
-        }
-
-        .icon {
-            margin-right: 0.875rem;
-        }
-
-        a {
-            color: #44566c;
-            cursor: pointer;
-            text-decoration: none !important;
-        }
+@include mixins.media-down(constants.$mobile-max-width) {
+    .contactsBlock {
+        flex-direction: column;
+        margin-left: 1.875rem;
+        font-size: 17px;
     }
 }
 

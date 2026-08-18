@@ -1,8 +1,9 @@
-@use '@/shared/styles/variables' as *;
-@use '@/shared/styles/constants' as *;
+@use '@/shared/styles/variables';
+@use '@/shared/styles/constants';
+@use '@/shared/styles/mixins';
 
 .worksItem {
-    background-color: $firstInnerBlockBackgroundColor;
+    background-color: variables.$firstInnerBlockBackgroundColor;
     width: calc(50% - 30px);
     display: flex;
     justify-content: center;
@@ -12,13 +13,9 @@
     margin-right: 15px;
     margin-left: 15px;
     padding: 30px 30px 24px 30px;
-    color: $bodyTextColor;
+    color: variables.$bodyTextColor;
     margin-bottom: 2rem;
-    transition: 0.7s;
-
-    @media screen and (max-width: $desktop-dpi-middle-width) {
-        width: 100% !important;
-    }
+    transition: background-color 0.7s ease;
 
     &:hover {
         background: rgba(0, 0, 0, 0.3);
@@ -37,7 +34,7 @@
 .img {
     width: 120px;
     object-fit: cover;
-    transition: 0.7s;
+    transition: transform 0.7s ease;
 }
 
 .titleContent {
@@ -55,11 +52,17 @@
     bottom: 0;
     margin: auto;
     text-decoration: none;
-    width: 100px !important;
+    width: 100px;
     height: max-content;
-    background-color: $blueColor;
+    background-color: variables.$blueColor;
     border-radius: 30px;
-    transition: 0.7s;
+    transition: 0.7s ease;
     padding: 10px;
     color: white;
+}
+
+@include mixins.media-down(constants.$desktop-dpi-middle-width) {
+    .worksItem {
+        width: 100%;
+    }
 }

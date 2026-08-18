@@ -1,11 +1,11 @@
-@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/variables';
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 .box {
-    background-color: $whiteColor;
+    background-color: variables.$whiteColor;
     border-radius: 20px;
     padding: 1.875rem;
     transition: box-shadow 0.3s ease-in-out;
@@ -15,13 +15,13 @@
 }
 
 .inner {
-    background-color: $whiteColor;
+    background-color: variables.$whiteColor;
     padding: 1.875rem;
     transition: box-shadow 0.3s ease-in-out;
 }
 
 .shadow {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
 }
 
 

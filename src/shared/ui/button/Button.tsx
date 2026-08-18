@@ -1,6 +1,6 @@
 import { ElementType } from 'react';
 import style from './button.module.scss';
-import { ButtonProps } from './button.types';
+import { ButtonProps } from '@/shared';
 
 export const Button = <T extends ElementType = 'button'>({
     as,

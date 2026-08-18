@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { UseTypewriterOptions, UseTypewriterReturn } from './use-typewriter.types';
+import { UseTypewriterOptions, UseTypewriterReturn } from '@/shared';
 
 export * from './use-typewriter.types';
 

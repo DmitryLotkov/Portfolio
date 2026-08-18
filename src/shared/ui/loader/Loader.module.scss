@@ -1,5 +1,6 @@
-@use '@/shared/styles/constants' as *;
-@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/constants';
+@use '@/shared/styles/variables';
+@use '@/shared/styles/mixins';
 
 .loaderBlock {
     position: fixed;
@@ -25,12 +26,8 @@
     top: 40%;
     left: 60%;
 
-    @media screen and (max-width: $mobile-max-width) {
-        left: 45%;
-    }
-
     span {
-        color: $blueColor;
+        color: variables.$blueColor;
         border-radius: 50%;
         box-shadow: 0 0 10px rgb(113, 97, 208);
     }
@@ -39,12 +36,18 @@
 @keyframes scaling {
     from {
         transform: scale(1);
-        color: $blueColor;
+        color: variables.$blueColor;
     }
 
     50% {
         transform: scale(1.5);
         color: white;
+    }
+}
+
+@include mixins.media-down(constants.$mobile-max-width) {
+    .progress {
+        left: 45%;
     }
 }
 
