@@ -4,13 +4,13 @@ import App from '@/app/app';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '@/app/store';
+import { store } from '@/app/store';
 
 const container = document.getElementById('root');
 if (container) {
     const root = createRoot(container);
     root.render(
-        <BrowserRouter>
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             <Provider store={store}>
                 <App />
             </Provider>

@@ -1,14 +1,16 @@
 import './app.scss';
 import { HomePage } from '@/pages';
-import { useAppSelector, RequestStatusType } from '@/app/store';
+import { useSendMessageMutation, CONTACT_MESSAGE_CACHE_KEY } from '@/shared/api';
 import { Loader } from '@/shared/ui';
 
 export function App() {
-    const appStatus = useAppSelector<RequestStatusType>((state) => state.appReducer.status);
+    const [, { isLoading }] = useSendMessageMutation({
+        fixedCacheKey: CONTACT_MESSAGE_CACHE_KEY,
+    });
 
     return (
         <div className="App">
-            {appStatus === 'loading' && <Loader />}
+            {isLoading && <Loader />}
             <HomePage />
         </div>
     );

@@ -1,19 +1,13 @@
-import { applyMiddleware, combineReducers, legacy_createStore } from 'redux';
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import thunkMiddleware, { ThunkDispatch } from 'redux-thunk';
-import { AppActionsType, appReducer } from './app-reducer';
+import { configureStore } from '@reduxjs/toolkit';
+import { contactApi } from '@/shared/api';
 
-const rootReducer = combineReducers({
-    appReducer: appReducer,
+export const store = configureStore({
+    reducer: {
+        [contactApi.reducerPath]: contactApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(contactApi.middleware),
 });
 
-export const store = legacy_createStore(rootReducer, applyMiddleware(thunkMiddleware));
-
-export type RootActionsType = AppActionsType;
-export type AppStoreType = ReturnType<typeof rootReducer>;
-export type AppThunkDispatch = ThunkDispatch<AppStoreType, null, RootActionsType>;
-
-export const useAppSelector: TypedUseSelectorHook<AppStoreType> = useSelector;
-export const useAppDispatch: () => AppThunkDispatch = useDispatch;
-
-export default store;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

@@ -3,14 +3,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import styles from './send-message-form.module.scss';
 import { Button } from '@/shared/ui';
-import { useAppDispatch, sendMessageTC } from '@/app/store';
-import { SendMessageParams } from '../model/types';
+import {
+    useSendMessageMutation,
+    SendMessageDto,
+    CONTACT_MESSAGE_CACHE_KEY,
+} from '@/shared/api';
 
 export function SendMessageForm() {
-    const dispatch = useAppDispatch();
+    const [sendMessage, { isLoading }] = useSendMessageMutation({
+        fixedCacheKey: CONTACT_MESSAGE_CACHE_KEY,
+    });
+
     const formik = useFormik({
-        validate: (values: SendMessageParams) => {
-            const errors: Partial<SendMessageParams> = {};
+        validate: (values: SendMessageDto) => {
+            const errors: Partial<SendMessageDto> = {};
             if (!values.email) {
                 errors.email = 'Email required';
             } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -29,9 +35,13 @@ export function SendMessageForm() {
             name: '',
             message: '',
         },
-        onSubmit: (values: SendMessageParams) => {
-            dispatch(sendMessageTC(values));
-            formik.resetForm();
+        onSubmit: async (values: SendMessageDto) => {
+            try {
+                await sendMessage(values).unwrap();
+                formik.resetForm();
+            } catch {
+                // Ошибка обрабатывается через Swal в queryFn
+            }
         },
     });
 
@@ -42,6 +52,7 @@ export function SendMessageForm() {
                     <input
                         placeholder="Your Name"
                         type="text"
+                        disabled={isLoading}
                         className={
                             formik.errors.name && formik.touched.name
                                 ? styles.inputError
@@ -59,6 +70,7 @@ export function SendMessageForm() {
                     <input
                         placeholder="Your Email"
                         type="text"
+                        disabled={isLoading}
                         className={
                             formik.errors.email && formik.touched.email
                                 ? styles.inputError
@@ -76,6 +88,7 @@ export function SendMessageForm() {
             <div className={styles.inputMessageBlock}>
                 <textarea
                     placeholder="Your Message"
+                    disabled={isLoading}
                     className={
                         formik.errors.message && formik.touched.message
                             ? styles.inputError
@@ -90,11 +103,11 @@ export function SendMessageForm() {
                 )}
             </div>
             <div className={styles.button}>
-                <Button type="submit" disabled={!formik.isValid}>
+                <Button type="submit" disabled={!formik.isValid || isLoading}>
                     <span style={{ marginRight: '10px' }}>
                         <FontAwesomeIcon icon={faPaperPlane} />
                     </span>
-                    Send Message
+                    {isLoading ? 'Sending...' : 'Send Message'}
                 </Button>
             </div>
         </form>
