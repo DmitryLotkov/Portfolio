@@ -1,0 +1,35 @@
+import { useEffect, useRef, useState } from 'react';
+import Hamburger from 'hamburger-react';
+import style from './nav.module.scss';
+import BurgerMenu from './burger-menu';
+import { burgerMenuItems } from '@/shared/config';
+
+export function Nav() {
+    const [menuIsActive, setMenuIsActive] = useState<boolean>(false);
+    const menuRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const onClick = (e: MouseEvent) => {
+            if (menuRef.current) {
+                menuRef.current.contains(e.target as Node) || setMenuIsActive(false);
+            }
+        };
+        document.addEventListener('click', onClick);
+        return () => document.removeEventListener('click', onClick);
+    }, []);
+
+    return (
+        <div className={style.nav} ref={menuRef}>
+            <BurgerMenu
+                setMenuActive={setMenuIsActive}
+                menuIsActive={menuIsActive}
+                items={burgerMenuItems}
+            />
+            <div className={style.hamburger}>
+                <Hamburger rounded size={20} toggled={menuIsActive} toggle={setMenuIsActive} />
+            </div>
+        </div>
+    );
+}
+
+export default Nav;

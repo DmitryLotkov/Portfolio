@@ -1,0 +1,51 @@
+@use '@/shared/styles/constants' as *;
+@use '@/shared/styles/variables' as *;
+
+.loaderBlock {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20rem;
+    padding-left: 19rem;
+}
+
+.progress {
+    animation: 1.1s infinite scaling;
+    z-index: 2;
+    position: fixed;
+    top: 40%;
+    left: 60%;
+
+    @media screen and (max-width: $mobile-max-width) {
+        left: 45%;
+    }
+
+    span {
+        color: $blueColor;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgb(113, 97, 208);
+    }
+}
+
+@keyframes scaling {
+    from {
+        transform: scale(1);
+        color: $blueColor;
+    }
+
+    50% {
+        transform: scale(1.5);
+        color: white;
+    }
+}
+
+

@@ -1,13 +1,13 @@
-@use '@/common/styles/variables' as *;
-@use '@/common/styles/mixins' as *;
+@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/mixins' as *;
 
 * {
     margin: 0;
 }
 
 body {
-    background-image: url('@/assets/icons/triangles-top.svg'),
-        url('@/assets/icons/triangles-bottom.svg');
+    background-image: url('@/shared/assets/icons/triangles-top.svg'),
+        url('@/shared/assets/icons/triangles-bottom.svg');
     background-position: left top, right bottom;
     background-repeat: no-repeat;
     background-size: inherit;
@@ -15,3 +15,5 @@ body {
     min-height: 100vh;
     @include text("Archivo", 1rem, 400, 1.65, $bodyTextColor);
 }
+
+

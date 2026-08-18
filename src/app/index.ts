@@ -1,3 +1,2 @@
-export * from './App';
+export * from './app';
 export * from './store';
-export { default } from './App';

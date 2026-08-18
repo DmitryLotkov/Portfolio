@@ -1,7 +1,7 @@
-import './App.scss';
-import { MainLayout } from '@/layout';
+import './app.scss';
+import { HomePage } from '@/pages';
 import { useAppSelector, RequestStatusType } from '@/app/store';
-import { Loader } from '@/common/components';
+import { Loader } from '@/shared/ui';
 
 export function App() {
     const appStatus = useAppSelector<RequestStatusType>((state) => state.appReducer.status);
@@ -9,7 +9,7 @@ export function App() {
     return (
         <div className="App">
             {appStatus === 'loading' && <Loader />}
-            <MainLayout />
+            <HomePage />
         </div>
     );
 }
