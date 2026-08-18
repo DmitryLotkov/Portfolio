@@ -25,5 +25,3 @@ export function WorksBlock() {
         </section>
     );
 }
-
-export default WorksBlock;

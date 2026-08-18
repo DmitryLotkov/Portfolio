@@ -113,5 +113,3 @@ export function SendMessageForm() {
         </form>
     );
 }
-
-export default SendMessageForm;

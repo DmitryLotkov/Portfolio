@@ -21,5 +21,3 @@ export function SkillCard({ skills, skillsDescription, pictures }: SkillCardProp
         </div>
     );
 }
-
-export default SkillCard;

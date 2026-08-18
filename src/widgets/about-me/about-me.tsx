@@ -1,4 +1,3 @@
-import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import style from './about-me.module.scss';
 import commonStyle from '@/shared/styles/box.module.scss';
@@ -31,5 +30,3 @@ export function AboutMe() {
         </section>
     );
 }
-
-export default AboutMe;

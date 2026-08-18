@@ -20,5 +20,3 @@ export const Button = <T extends ElementType = 'button'>({
         </div>
     );
 };
-
-export default Button;

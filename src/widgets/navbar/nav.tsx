@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Hamburger from 'hamburger-react';
 import style from './nav.module.scss';
-import BurgerMenu from './burger-menu';
+import { BurgerMenu } from '@/widgets';
 import { burgerMenuItems } from '@/shared/config';
 
 export function Nav() {
@@ -31,5 +31,3 @@ export function Nav() {
         </div>
     );
 }
-
-export default Nav;

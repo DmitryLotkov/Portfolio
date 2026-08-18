@@ -15,5 +15,3 @@ export function WorkCard({ description, title, src, href }: WorkCardProps) {
         </div>
     );
 }
-
-export default WorkCard;

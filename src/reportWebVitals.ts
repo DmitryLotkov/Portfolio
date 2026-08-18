@@ -1,6 +1,6 @@
 import type { MetricType } from 'web-vitals';
 
-const reportWebVitals = (onPerfEntry?: (metric: MetricType) => void) => {
+export const reportWebVitals = (onPerfEntry?: (metric: MetricType) => void) => {
     if (onPerfEntry) {
         import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
             onCLS(onPerfEntry);
@@ -11,5 +11,3 @@ const reportWebVitals = (onPerfEntry?: (metric: MetricType) => void) => {
         }).catch(() => {});
     }
 };
-
-export default reportWebVitals;

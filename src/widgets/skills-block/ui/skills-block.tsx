@@ -27,5 +27,3 @@ export function SkillsBlock() {
         </section>
     );
 }
-
-export default SkillsBlock;

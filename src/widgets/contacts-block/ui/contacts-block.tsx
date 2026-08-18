@@ -22,5 +22,3 @@ export function ContactsBlock() {
         </section>
     );
 }
-
-export default ContactsBlock;

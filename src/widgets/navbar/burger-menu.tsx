@@ -16,5 +16,3 @@ export const BurgerMenu = ({ items, menuIsActive }: BurgerMenuProps) => {
         </div>
     );
 };
-
-export default BurgerMenu;

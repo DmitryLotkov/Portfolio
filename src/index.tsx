@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
-import App from '@/app/app';
-import reportWebVitals from './reportWebVitals';
+import { App } from '@/app';
+import { reportWebVitals } from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from '@/app/store';

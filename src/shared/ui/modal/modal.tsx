@@ -1,8 +1,7 @@
-import React from 'react';
 import style from './modal.module.scss';
 import { ModalProps } from '@/shared';
 
-export const Modal: React.FC<ModalProps> = ({
+export const Modal = ({
     enableBackground,
     backgroundStyle,
     backgroundOnClick = () => {},
@@ -11,7 +10,7 @@ export const Modal: React.FC<ModalProps> = ({
     show,
     children,
     className,
-}) => {
+}: ModalProps) => {
     if (!show) return null;
 
     return (
@@ -33,5 +32,3 @@ export const Modal: React.FC<ModalProps> = ({
         </>
     );
 };
-
-export default Modal;

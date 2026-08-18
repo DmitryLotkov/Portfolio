@@ -57,5 +57,3 @@ export function ContactBlock() {
         </div>
     );
 }
-
-export default ContactBlock;
