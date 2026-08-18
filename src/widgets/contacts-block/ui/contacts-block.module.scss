@@ -1,0 +1,28 @@
+@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/constants' as *;
+
+.contacts {
+    width: 100%;
+    min-width: 280px;
+    background-color: $whiteColor;
+}
+
+.contactsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 20px 30px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: $mobile-max-width) {
+        padding: 0 15px 15px 15px;
+    }
+}

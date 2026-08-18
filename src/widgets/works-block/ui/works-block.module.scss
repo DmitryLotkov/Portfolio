@@ -1,0 +1,17 @@
+@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/constants' as *;
+
+.worksContainer {
+    width: 100%;
+    min-width: 280px;
+    background-color: $whiteColor;
+}
+
+.worksContent {
+    display: flex;
+    justify-content: center;
+    background-color: $whiteColor;
+    margin-right: 15px;
+    margin-left: 15px;
+    flex-wrap: wrap;
+}

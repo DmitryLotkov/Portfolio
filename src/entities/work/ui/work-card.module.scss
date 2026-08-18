@@ -1,0 +1,65 @@
+@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/constants' as *;
+
+.worksItem {
+    background-color: $firstInnerBlockBackgroundColor;
+    width: calc(50% - 30px);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 30px 30px 24px 30px;
+    color: $bodyTextColor;
+    margin-bottom: 2rem;
+    transition: 0.7s;
+
+    @media screen and (max-width: $desktop-dpi-middle-width) {
+        width: 100% !important;
+    }
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.3);
+
+        .showLink {
+            display: flex;
+            justify-content: center;
+        }
+
+        .img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.img {
+    width: 120px;
+    object-fit: cover;
+    transition: 0.7s;
+}
+
+.titleContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showLink {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-decoration: none;
+    width: 100px !important;
+    height: max-content;
+    background-color: $blueColor;
+    border-radius: 30px;
+    transition: 0.7s;
+    padding: 10px;
+    color: white;
+}

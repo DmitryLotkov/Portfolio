@@ -1,0 +1,91 @@
+@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/constants' as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media screen and (max-width: $mobile-max-width) {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.inputMessageBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    flex: 1;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    color: $bodyTextColor;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: none;
+    height: auto;
+    padding: 0.875rem 1.375rem 0.8125rem;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background-color: $whiteColor;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        border: 1px solid $blueColor;
+    }
+}
+
+.inputError {
+    @extend .input;
+    border: 1px solid $errorColor !important;
+}
+
+.textarea {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    padding: 0.8125rem 1.1875rem;
+    resize: none;
+    outline: none;
+    height: 180px;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: $bodyTextColor;
+    background-color: $whiteColor;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        border: 1px solid $blueColor;
+    }
+}
+
+.errorMessage {
+    position: absolute;
+    color: $errorColor;
+    top: calc(100% + 4px);
+    left: 15px;
+    font-size: 0.75rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

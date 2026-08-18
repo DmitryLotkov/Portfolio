@@ -1,0 +1,32 @@
+@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/constants' as *;
+
+.scrollUpButton {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 18%;
+    bottom: 50px;
+    z-index: 100;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 1400px) {
+        right: 1% !important;
+    }
+}
