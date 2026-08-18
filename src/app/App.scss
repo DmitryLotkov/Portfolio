@@ -1,0 +1,17 @@
+@use '@/common/styles/variables' as *;
+@use '@/common/styles/mixins' as *;
+
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url('@/assets/icons/triangles-top.svg'),
+        url('@/assets/icons/triangles-bottom.svg');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-color: $bodyBackgroundColor;
+    min-height: 100vh;
+    @include text("Archivo", 1rem, 400, 1.65, $bodyTextColor);
+}

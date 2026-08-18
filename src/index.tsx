@@ -1,12 +1,11 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from '@/app/App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
-import './fontawesome';
-import { Provider } from "react-redux";
-import store from "./state/store";
+import { BrowserRouter } from 'react-router-dom';
+import '@/common/config/fontawesome';
+import { Provider } from 'react-redux';
+import store from '@/app/store';
 
 const container = document.getElementById('root');
 if (container) {

@@ -32,30 +32,27 @@ export const useTypewriter = ({
 
         const currentWord = textArray[textIndex] || '';
 
-        // Если одно слово и не зацикливаем, останавливаемся после полной печати
+        // If single word and not looping, stop after full type
         if (!loop && textIndex === textArray.length - 1 && subIndex === currentWord.length) {
             return;
         }
 
-        // Слово напечатано полностью -> пауза перед стиранием
+        // Word is fully typed -> pause before erasing
         if (!isDeleting && subIndex === currentWord.length) {
-            // Если слово всего одно и есть цикл, все равно можно стирать или держать
             if (textArray.length === 1 && !loop) return;
 
             const timer = setTimeout(() => setIsDeleting(true), delayBeforeErase);
             return () => clearTimeout(timer);
         }
 
-        // Слово стерто полностью -> переходим к следующему
+        // Word is fully erased -> move to next word
         if (isDeleting && subIndex === 0) {
             setIsDeleting(false);
             setTextIndex((prev) => (prev + 1) % textArray.length);
-            const timer = setTimeout(() => {
-            }, delayBeforeType);
-            return () => clearTimeout(timer);
+            return;
         }
 
-        // Скорость печати / стирания
+        // Typing / erasing delay
         const delay = isDeleting
             ? eraseSpeed
             : subIndex === 0
@@ -83,5 +80,5 @@ export const useTypewriter = ({
     const currentWord = textArray[textIndex] || '';
     const currentText = currentWord.substring(0, subIndex);
 
-    return {currentText, isDeleting};
+    return { currentText, isDeleting };
 };

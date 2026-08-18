@@ -8,6 +8,7 @@ export default defineConfig({
   base: '/Portfolio/',
   resolve: {
     alias: {
+      '@': path.resolve(import.meta.dirname, './src'),
       src: path.resolve(import.meta.dirname, './src'),
     },
   },
