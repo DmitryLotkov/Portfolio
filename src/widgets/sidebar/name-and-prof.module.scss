@@ -2,10 +2,11 @@
 
 .nameAndProf {
     text-align: center;
+    padding: 0 10px;
 
     .userName {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
         position: relative;
@@ -21,16 +22,21 @@
     .professionName {
         background-color: variables.$bodyBackgroundColor;
         color: variables.$bodyTextColor;
-        display: inline-block;
-        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.2;
         text-align: center;
         white-space: nowrap;
-        vertical-align: baseline;
-        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-            border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        font-size: 0.76rem;
+        font-weight: 500;
+        letter-spacing: 0.1px;
         border-radius: 10rem;
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 0.8rem;
         margin-bottom: 1.5rem;
+        max-width: 100%;
+        box-sizing: border-box;
+        min-height: 28px;
     }
 }
 

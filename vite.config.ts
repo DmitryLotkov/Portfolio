@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
   base: '/Portfolio/',
   resolve: {
@@ -13,6 +13,13 @@ export default defineConfig({
     },
   },
   css: {
+    devSourcemap: true,
+    modules: {
+      generateScopedName:
+        mode === 'development'
+          ? '[name]__[local]'
+          : '[hash:base64:6]',
+    },
     preprocessorOptions: {
       scss: {
         loadPaths: [path.resolve(import.meta.dirname, './')],
@@ -24,4 +31,4 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-});
+}));

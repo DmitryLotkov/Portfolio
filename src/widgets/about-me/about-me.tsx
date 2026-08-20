@@ -14,16 +14,13 @@ export function AboutMe() {
                 </span>
                 <div>
                     <p>
-                        Hello, I'm frontend developer from Minsk, Belarus, working in web development.
+                        Hello! I am a <strong>Frontend Developer</strong> with <strong>4+ years of commercial experience</strong> specializing in building complex, high-performance web applications and enterprise platforms.
                     </p>
                     <p>
-                        My job is to build web applications so that it is functional and user-friendly but at the same time attractive.
-                        I use modern technologies like as: React JS, Redux, Redux-thunk, Unit testing, REST API.
-                        Confident knowledge of native JavaScript and TypeScript.
-                        My projects with using this technologies are listed in section My Works.
+                        My core focus is scalable frontend architecture using <strong>Angular (versions 7 through 22)</strong> and <strong>React (17+)</strong> with <strong>TypeScript</strong>. I have deep practical experience with reactive programming (RxJS, Signals), state management (NgRx, Redux Toolkit, Zustand), modular styling systems, and unit/integration testing.
                     </p>
                     <p>
-                        Consider options for remote work.
+                        I focus on delivering clean code, robust architectural design patterns (SOLID, Clean Architecture), seamless API integration, and optimal UX performance. Open to challenging projects and remote collaboration.
                     </p>
                 </div>
             </Fade>

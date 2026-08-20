@@ -8,7 +8,7 @@ export function NameAndProf() {
                 <span className={style.textWeight}>Dmitry</span> Lotkov
             </h3>
             <div className={style.professionName}>
-                <Typewriter text={'Frontend Developer'} />
+                <Typewriter text={'Frontend Developer (React & Angular)'} />
             </div>
         </div>
     );

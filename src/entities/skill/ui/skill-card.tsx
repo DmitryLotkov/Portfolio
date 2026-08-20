@@ -2,22 +2,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import style from './skill-card.module.scss';
 import { SkillCardProps } from '@/entities';
 
-export function SkillCard({ skills, skillsDescription, pictures }: SkillCardProps) {
+export function SkillCard({ skills, skillsDescription, pictures, tags }: SkillCardProps) {
     return (
         <div className={style.skillsItem}>
-            {typeof pictures === 'string' ? (
-                <img className={style.image} src={pictures} alt={skills} />
-            ) : (
-                <FontAwesomeIcon className={style.image} icon={pictures} />
-            )}
-            <div className={style.skillText}>
-                <h3 className={style.skillTitle}>
-                    <span>{skills}</span>
-                </h3>
-                <div style={{ fontSize: '0.8rem' }}>
-                    <span>{skillsDescription}</span>
+            <div className={style.header}>
+                <div className={style.iconWrapper}>
+                    {typeof pictures === 'string' ? (
+                        <img className={style.image} src={pictures} alt={skills} />
+                    ) : (
+                        <FontAwesomeIcon className={style.icon} icon={pictures} />
+                    )}
                 </div>
+                <h3 className={style.skillTitle}>{skills}</h3>
             </div>
+            <p className={style.skillDescription}>{skillsDescription}</p>
+            {tags && tags.length > 0 && (
+                <div className={style.tagsContainer}>
+                    {tags.map((tag) => (
+                        <span key={tag} className={style.tag}>
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

@@ -1,14 +1,75 @@
+@use '@/shared/styles/variables';
+@use '@/shared/styles/constants';
+@use '@/shared/styles/mixins';
+
 .skillsBlock {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 15px;
-    margin-left: 15px;
+    padding: 1.875rem 1.875rem 3rem;
+    box-sizing: border-box;
 }
 
-.skillsContainer {
+.title {
+    margin: 0 0 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a2533;
+}
+
+.categorySection {
+    margin-bottom: 3.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.categoryHeader {
+    margin-bottom: 1.75rem;
+}
+
+.categoryTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a2533;
+    margin: 0 0 0.4rem 0;
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    gap: 8px;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 18px;
+        background-color: variables.$blueColor;
+        border-radius: 2px;
+    }
+}
+
+.categorySubtitle {
+    font-size: 0.9rem;
+    color: variables.$bodyTextColor;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+@include mixins.media-down(constants.$desktop-dpi-middle-width) {
+    .skillsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include mixins.media-down(constants.$mobile-max-width) {
+    .categoryTitle {
+        font-size: 1.1rem;
+    }
+
+    .categorySubtitle {
+        font-size: 0.825rem;
+    }
 }
