@@ -94,8 +94,8 @@ export const skillsData: SkillsDataType = {
             picture: faShieldAlt,
             skill: 'Security & Auth',
             skillDescription:
-                'Secure user authentication and enterprise authorization implementing Keycloak, OAuth2 / OIDC integrations, JWT tokens, Refresh/Access token rotation, CORS policies, and XSS/CSRF protection.',
-            tags: ['Keycloak', 'OAuth2 / OIDC', 'JWT', 'Token Rotation', 'CORS'],
+                'Secure user authentication and enterprise authorization implementing Keycloak, OAuth2 integrations, JWT tokens, Refresh/Access token rotation, CORS policies, and XSS/CSRF protection.',
+            tags: ['Keycloak', 'OAuth2', 'JWT', 'Token Rotation', 'CORS'],
         },
         {
             picture: faGitAlt,
