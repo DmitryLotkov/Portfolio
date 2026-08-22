@@ -7,9 +7,9 @@ import {
 import {
     faDatabase,
     faShieldAlt,
+    faBolt,
 } from '@fortawesome/free-solid-svg-icons';
 import ReactLogo from '@/shared/assets/icons/react.svg';
-import ReduxLogo from '@/shared/assets/icons/redux.svg';
 import SassLogo from '@/shared/assets/icons/sass.svg';
 import JestLogo from '@/shared/assets/icons/jest.svg';
 import RestAPI from '@/shared/assets/icons/rest.svg';
@@ -22,29 +22,22 @@ export const skillsData: SkillsDataType = {
             picture: faAngular,
             skill: 'Angular Ecosystem',
             skillDescription:
-                'Production and Enterprise SPA development across Angular 7–22. Deep experience with Reactive Forms, Signals, RxJS stream orchestration, NgRx state management, PWA / Service Workers, standalone components, dynamic routing and Angular Material.',
-            tags: ['Angular 7–22', 'RxJS', 'NgRx', 'Signals', 'Angular Material', 'Dependency Injection'],
+                'Production and Enterprise SPA development across Angular 7–22. Deep experience with Reactive Forms, Signals, RxJS stream orchestration, NgRx store/effects, PWA / Service Workers, standalone components, Route Guards (RBAC) and Angular Material.',
+            tags: ['Angular 7–22', 'RxJS', 'NgRx', 'Signals', 'Route Guards (RBAC)', 'Angular Material', 'PrimeNG', 'Zoneless'],
         },
         {
             picture: ReactLogo,
             skill: 'React Ecosystem',
             skillDescription:
-                'Building robust React 17+ SPA and PWA applications with Service Workers (offline caching), custom hooks architecture, Context API, performance optimization, virtualized lists, React Router, and modern component composition.',
-            tags: ['React 17+', 'PWA', 'Service Workers', 'Custom Hooks', 'Context API', 'Vite'],
+                'Building robust React 17–19 SPA and PWA applications with Redux Toolkit, RTK Query, TanStack Query, Zustand, React Router, custom hooks architecture, Context API, performance optimization, and modern component composition.',
+            tags: ['React 17–19', 'Redux Toolkit', 'RTK Query', 'TanStack Query', 'Zustand', 'React Router', 'Context API', 'Axios'],
         },
         {
             picture: TSLogo,
             skill: 'TypeScript & Modern JS',
             skillDescription:
                 'Strict type safety, complex generics, utility types, mapped types, modern ESNext features, OOP, functional programming paradigms, and clean architectural principles (SOLID, DRY).',
-            tags: ['TypeScript 3+', 'Generics', 'ESNext', 'FSD Architecture', 'SOLID', 'Design Patterns'],
-        },
-        {
-            picture: ReduxLogo,
-            skill: 'State Management & Caching',
-            skillDescription:
-                'Predictable global state design using Redux Toolkit, RTK Query, NgRx Store/Effects, Zustand, and TanStack (React) Query for robust client-server state synchronization.',
-            tags: ['Redux Toolkit', 'RTK Query', 'NgRx', 'Zustand', 'TanStack Query', 'RxJS'],
+            tags: ['TypeScript 3+', 'Generics', 'FSD Architecture', 'SOLID', 'Design Patterns'],
         },
         {
             picture: SassLogo,
@@ -59,6 +52,13 @@ export const skillsData: SkillsDataType = {
             skillDescription:
                 'Comprehensive testing pyramid with Unit, Integration, and Component tests using Jest, Vitest, and Storybook visual documentation.',
             tags: ['Jest', 'Vitest', 'Storybook', 'TDD', 'Karma/Jasmine'],
+        },
+        {
+            picture: faBolt,
+            skill: 'Web Performance & Standards',
+            skillDescription:
+                'Deep understanding of DOM/BOM APIs, Web Vitals metrics, responsive and cross-browser layouts, Service Workers for offline caching, SEO optimization, and bundle splitting.',
+            tags: ['Web Vitals', 'DOM APIs', 'PWA', 'Service Workers', 'SEO', 'Performance'],
         },
     ],
     backend: [
